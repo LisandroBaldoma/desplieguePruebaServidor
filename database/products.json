@@ -1,0 +1,113 @@
+[
+  {
+    "id": "19d8b53f-26c0-48e8-b6wac-54adc97a580c",
+    "title": "Parlante",
+    "description": "Parlante JBL azul bluethoo",
+    "stock": 25,
+    "code": "jbl-blue2345",
+    "price": 2343,
+    "status": true,
+    "thumbnails": [
+      "Sin imagen"
+    ],
+    "category": "Electronica"
+  },
+  {
+    "id": "19d8b53f-26c0-4w8e8-b6ac-54adc97a580c",
+    "title": "Lavarropa",
+    "description": "Lavarropa 256KG WIFI",
+    "stock": 25,
+    "code": "lava-3456-wifi",
+    "price": 9872,
+    "status": true,
+    "thumbnails": [
+      "Sin imagen"
+    ],
+    "category": "Linea Blanca"
+  },
+  {
+    "id": "19d8b53f-26c0-48e8-b6wac-54adwwc97a580c",
+    "title": "Monitor",
+    "description": "MOnitor TOPHOUSE 24' hdr",
+    "code": "Monitor24hdr34567",
+    "price": 8765,
+    "status": true,
+    "stock": 25,
+    "thumbnails": [
+      "Sin imagen"
+    ],
+    "category": "Electronica"
+  },
+  {
+    "id": "19d8b5w3f-w26c0-48we8-b6ac-54adc97a580c",
+    "title": "Televisor",
+    "description": "Tv Samsung 50' smart",
+    "code": "tv50smart3456",
+    "price": 1234,
+    "status": true,
+    "stock": 25,
+    "thumbnails": [
+      "Sin imagen"
+    ],
+    "category": "Electronica"
+  },
+  {
+    "id": "19d8b5q3f-2w6c0-48e8-b6aqc-54qadc97a580c",
+    "title": "Escritorio",
+    "description": "Escritorio Gamer 3 cajones",
+    "code": "escri-34mss23",
+    "price": "87654",
+    "status": "true",
+    "stock": "12",
+    "thumbnails": "Sin-Imagen",
+    "category": "Muebles"
+  },
+  {
+    "id": "19dw8b53f-26ec0-48de8-b6ac-54addc97a580c",
+    "title": "Televisor led 32¨",
+    "description": "Tele-led-32",
+    "code": "tv-led-32-smart",
+    "price": "13456",
+    "status": "true",
+    "stock": "12",
+    "thumbnails": "Sin-Imagen",
+    "category": "Electronica"
+  },
+  {
+    "id": "19sd8b53f-26sc0-4d8e8-b6sac-54aadc97a580c",
+    "title": "Computadora Portatil",
+    "description": "32gb-ssd-intel",
+    "code": "lenovo-black-led",
+    "price": "123876",
+    "status": "true",
+    "stock": "9",
+    "thumbnails": "Sin-Imagen",
+    "category": "Electronica"
+  },
+  {
+    "id": "19ds8b53f-d26c0-48de8-b6aca-54adcd97a580c",
+    "title": "Frezzer",
+    "description": "Frezzer-Nofrost",
+    "code": "frezesam-3456",
+    "price": 23530,
+    "status": true,
+    "stock": 25,
+    "thumbnails": [
+      "Sin imagen"
+    ],
+    "category": "Linea Blanca"
+  },
+  {
+    "id": "19ds8b53f-26cdd0-48ade8-bda6ac-54dadc97a580c",
+    "title": "Heladera Post",
+    "description": "Heladera NoFrost",
+    "code": "post heladera prueba",
+    "price": 123455,
+    "status": true,
+    "stock": 3,
+    "thumbnails": [
+      "Sin imagen"
+    ],
+    "category": "Linea Blanca"
+  }
+]

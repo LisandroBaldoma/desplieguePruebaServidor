@@ -1,0 +1,57 @@
+components:
+  requestBodies:
+    DatosCrearProducto:
+      type: object
+      required:
+        - id
+        - title
+        - description
+        - stock
+        - price
+        - code
+        - category
+        - thumbnails
+        - status
+        - owner
+      properties:
+        id:
+          type: string
+          description: El id del producto.
+        title:
+          type: string
+          description: El titulo del producto.
+        description:
+          type: string
+          description: La descripcion del producto.
+        stock:
+          type: number
+          description: El stock del producto.
+        price:
+          type: number
+          description: El precio del producto.
+        code:
+          type: string
+          description: Codigo unico identificacion producto.
+        category:
+          type: string
+          description: La categoria del producto.
+        thumbnails:
+          type: array
+          description: Array con las url de la imagen del producto.
+        status:
+          type: boolean
+          description: El status del producto.
+        owner:
+          type: string
+          description: El email del creador del prodcuto.
+      example:        
+        id: 19d8b5w3f-w26c0-48we8-b6ac-54adc97a580c
+        title: Televisor
+        description: Tv Samsung 50' smart
+        code: tv50smart3456
+        price: 12344
+        status: true
+        stock: 25
+        thumbnails: [Sin imagen]
+        category: Electronica        
+        owner: baldomalisandro@coderhouse.com.ar

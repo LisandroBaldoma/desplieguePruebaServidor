@@ -1,0 +1,13 @@
+components:
+  requestBodies:
+    DatosCrearCarrito:
+      type: object
+      required:
+        - products        
+      properties:
+        product:
+          type: array
+          description: Array de producto vacio.        
+      example:
+        product: []
+        

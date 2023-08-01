@@ -1,0 +1,13 @@
+components:
+  schemas:
+    Cart:
+      type: object
+      required:
+        - products                
+      properties:
+        products:
+          type: array
+          description: Array de productos.        
+      example:
+        products: []
+       

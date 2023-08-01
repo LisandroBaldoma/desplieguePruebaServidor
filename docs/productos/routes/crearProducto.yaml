@@ -1,0 +1,19 @@
+paths:
+  /api/products:
+    post:
+      summary: Crea una nueva mascota.
+      tags:
+        - Productos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/DatosCrearProducto'
+      responses:
+        "200":
+          description: Producto Creado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Producto'

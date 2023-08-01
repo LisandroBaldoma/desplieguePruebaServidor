@@ -1,0 +1,78 @@
+<div id="formularioRegister" class="d-flex flex-column align-items-center">
+  <h2 class="text-center m-4">Formulario de Registro</h2>
+
+  <form
+    class="col-6 border border-info row g-3 d-flex flex-column border align-items-center text-center m-2 p-2 needs-validation"
+    novalidate
+  >
+    <div class="col-6">
+      <label for="validationServer01" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        value=""
+        required
+      />
+      <div class="valid-feedback">
+        Valido!
+      </div>
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        El campo no debe estar vacio.
+      </div>
+    </div>
+    <div class="col-6">
+      <label for="validationServer02" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="lastName" value="" required />
+      <div class="valid-feedback">
+        Valido!
+      </div>
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        El campo no debe estar vacio.
+      </div>
+    </div>
+    <div class="col-6">
+      <label for="validationServerUsername" class="form-label">Email</label>
+      <div class="input-group has-validation">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+          required
+        />
+        <div class="valid-feedback">
+          Valido!
+        </div>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          formato Valido xxxx@xxxx.xxx
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <label for="validationServer03" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        aria-describedby="validationServer03Feedback"
+        required
+      />
+      <div class="valid-feedback">
+        Valido!
+      </div>
+      <div id="validationServer03Feedback" class="invalid-feedback">
+        El campo no debe estar vacio.
+      </div>
+    </div>
+    <div class="col-md-4">
+      <button
+        class="btn btn-primary"
+        type="submit"
+        id="btn-submit"
+      >Registrarse</button>
+    </div>
+  </form>
+</div>
+
+<script src="/static/js/registerForm.js"></script>

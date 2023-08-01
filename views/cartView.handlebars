@@ -1,0 +1,65 @@
+<div
+  class="d-flex justify-content-center m-4 flex-column align-items-center"
+  id="carritoContenedor"
+>
+  <h1 class="text-center">DETALLE CARRITO DE COMPRAS</h1>
+  <div class="card" style="width: 30rem;">
+    <div class="card-header">
+      Carrito:
+      {{this.cart}}
+      <input type="hidden" id="cartId" value={{this.cart}} />
+    </div>
+    <ul class="list-group list-group-flush">
+      {{#if products}}
+        {{#each productsList}}
+          <li class="list-group-item">producto:
+            {{this.product.title}}
+            - cantidad:
+            {{this.quantity}}
+            - Categoria:
+            {{this.product.category}}</li>
+        {{/each}}
+      {{else}}
+        <p>No hay productos para mostrar</p>
+      {{/if}}
+    </ul>
+  </div>
+  {{#if products}}
+    <button
+      type="button"
+      class="btn btn-primary m-2"
+      style="width: 30rem;"
+      id="btnComprar"
+    >Comprar</button>
+    <button
+      type="button"
+      class="btn btn-primary m-2"
+      style="width: 30rem;"
+      id="btnVaciarCrrito"
+    >Vaciar Carrito</button>
+  {{else}}
+    <a
+      href="http://localhost:8080/products"
+      type="button"
+      class="btn btn-primary"
+      style="width: 15rem;"
+    >Productos</a>
+  {{/if}}
+</div>
+
+<div
+  class="d-flex justify-content-center m-4 flex-column d-none"
+  id="compraContenedor"
+>
+
+</div>
+<div id="btnVolver" class="d-flex d-none m-5">
+  <a
+    href="http://localhost:8080/products"
+    type="button"
+    class="btn btn-primary"
+    style="width: 15rem;"
+  >Productos</a>
+</div>
+
+<script src="/static/js/cartView.js"></script>
