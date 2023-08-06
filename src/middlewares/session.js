@@ -1,13 +1,10 @@
 import MongoStore from "connect-mongo";
 import session from "express-session";
-//import { MOONGODB_CONECTION_STRING } from "../config/database.config.js";
-import dotenv from 'dotenv'
-
-//dotenv.config();
+import { CNX_STR } from "../config/database.config.js";
 
 export default session({
-  store: MongoStore.create({mongoUrl: process.env.MOONGODB_CONECTION_STRING}),
+  store: MongoStore.create({ mongoUrl: CNX_STR }),
   saveUninitialized: false,
   resave: false,
-  secret: "SESSION_SECRET"
+  secret: "SESSION_SECRET",
 });

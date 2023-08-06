@@ -1,11 +1,9 @@
 import mongoose from "mongoose";
-//import { MOONGODB_CONECTION_STRING } from "../config/database.config.js";
-import dotenv from 'dotenv'
+import { CNX_STR } from "../config/database.config.js";
 
-dotenv.config()
 export async function conectarMongooseDb() {
-  await mongoose.connect(process.env.MOONGODB_CONECTION_STRING);
-  console.log(`Base de Datos conectada a ${process.env.MOONGODB_CONECTION_STRING}`);
+  await mongoose.connect(CNX_STR);
+  console.log(`Base de Datos conectada a ${CNX_STR}`);
   
 }
 

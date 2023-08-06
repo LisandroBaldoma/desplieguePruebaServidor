@@ -6,21 +6,15 @@ import { Server as SocketIOServer } from "socket.io";
 import session from "./middlewares/session.js";
 import { passportInitialize, passportSession } from "./middlewares/passport.js";
 
-import dotenv from "dotenv";
 import { manejoDeErrores } from "./middlewares/manejoDeErrores.js";
 import { logger } from "./middlewares/logger.js";
-//import { logger } from "./middlewares/logger.js";
-
-// Variables de entorno
-dotenv.config({
-  path: process.argv.slice(2)[0] === "memoria" ? "memoria.env" : "mongodb.env",
-});
+import { PORT } from "./config/servidor.config.js";
 
 // Configuracion Server
 const app = express();
 
-const httpServer = app.listen(process.env.PORT, () => {
-  console.log(`Escuchando en puerto ${process.env.PORT}`);
+const httpServer = app.listen(PORT, () => {
+  console.log(`Escuchando en puerto ${PORT}`);
 });
 // me permite entAblar una comunnicacion entre los socket del servidor y del cliente
 const io = new SocketIOServer(httpServer);
