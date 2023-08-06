@@ -32,7 +32,7 @@ if (buttonAddCart) {
   for (let btn of buttonAddCart) {
     btn.addEventListener("click", () => {
       fetch(
-        `http://localhost:8080/api/carts/${cartUser.value}/product/${btn.id}`,
+        `/api/carts/${cartUser.value}/product/${btn.id}`,
         {
           method: "POST",
           headers: {
@@ -49,7 +49,7 @@ if (buttonAddCart) {
     });
   }
 }
-linKCarritoCompra.href = `http://localhost:8080/carts/${cartUser.value}`;
+linKCarritoCompra.href = `/carts/${cartUser.value}`;
 
 
 const formLogout = document.querySelector('#formLogout2')
@@ -58,7 +58,7 @@ if (formLogout instanceof HTMLFormElement) {
   formLogout.addEventListener('submit', async event => {
     event.preventDefault()
 
-    const { status } = await fetch('http://localhost:8080/api/sessions/logout', {
+    const { status } = await fetch('/api/sessions/logout', {
       method: 'POST'
     })
 

@@ -24,7 +24,7 @@ if (formLogin instanceof HTMLFormElement) {
         token: input_Token.value
       }
 
-      const respuesta = await fetch('http://localhost:8080/api/user/passwordupdate', {
+      const respuesta = await fetch('/api/user/passwordupdate', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

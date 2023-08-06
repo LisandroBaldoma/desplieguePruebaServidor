@@ -59,11 +59,11 @@ export class GenericDao {
       nextPage,
       prevLink:
         hasPrevPage == true
-          ? `http://localhost:8080/products?page=${prevPage}`
+          ? `/products?page=${prevPage}`
           : null,
       nextLink:
         hasNextPage == true
-          ? `http://localhost:8080/products?page=${nextPage}`
+          ? `/products?page=${nextPage}`
           : null,
     };
     return respuesta;

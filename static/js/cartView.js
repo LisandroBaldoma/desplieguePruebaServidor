@@ -18,14 +18,14 @@ if (btnVaciarCarrito instanceof HTMLButtonElement) {
     event.preventDefault();
     console.log(cartId);
     const { status } = await fetch(
-      `http://localhost:8080/api/carts/${cartId}`,
+      `/api/carts/${cartId}`,
       {
         method: "DELETE",
       }
     );
 
     if (status === 200) {
-      window.location.href = `http://localhost:8080/carts/${cartId}`;
+      window.location.href = `/carts/${cartId}`;
     } else {
       console.log("[logout] estado inesperado: " + status);
     }
@@ -36,7 +36,7 @@ if (btnComprar instanceof HTMLButtonElement) {
   btnComprar.addEventListener("click", (event) => {
     event.preventDefault();
 
-    fetch(`http://localhost:8080/api/carts/${cartId}/purchase`, {
+    fetch(`/api/carts/${cartId}/purchase`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

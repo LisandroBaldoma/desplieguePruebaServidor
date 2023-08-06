@@ -18,7 +18,7 @@ if (formLogin instanceof HTMLFormElement) {
         password: input_password.value,
       }
 
-      const respuesta = await fetch('http://localhost:8080/api/sessions', {
+      const respuesta = await fetch('/api/sessions', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
