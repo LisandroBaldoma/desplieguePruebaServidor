@@ -1,3 +1,4 @@
+import { User } from "../../dao/Models/User.js";
 import { ErrorDeAutenticacion } from "../../dao/Models/errors/ErrorDeAutenticacion.js";
 import { productsRepository } from "../../repositories/product.respository.js";
 import { userRepository } from "../../repositories/user.repository.js";
@@ -25,7 +26,8 @@ export async function handleGet(req, res, next) {
       const user = await userRepository.findByIdPopulate(req.params.id, "cart");
       res.json(user);
     } else {
-      const users = await userRepository.find(req.query);
+      console.log('prueba users dto')
+      const users = await userRepository.find(req.query);     
       res.json(users);
     }
   } catch (error) {
@@ -61,19 +63,17 @@ export async function handletEmailPassword(req, res, next) {
  console.log('enviar mail')
  try {
   const respuesta = await usersService.enviarEmailPasswordUpdate(req.body)
-  res.json(respuesta)
+  res.status(200).json(respuesta)
  } catch (error) {
   
  }
 }
 
 export async function handlePostUploadDocuments(req, res, next){
-  console.log('subir documentos')
-  console.log(req.params.uid)
-  console.log(req.file)
+  console.log('subir documentos')  
   try {
     const documents = await usersService.saveDocuments(req.files, req.params.uid)
-    
+    res.status(200).json(documents)
   } catch (error) {
     
   }

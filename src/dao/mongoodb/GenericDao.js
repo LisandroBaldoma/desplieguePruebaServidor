@@ -2,6 +2,21 @@ function toPojo(object) {
   return JSON.parse(JSON.stringify(object));
 }
 
+function dtoWeb(docs) {
+  const docDtoWeb = [];
+  docs.forEach((element) => {
+    delete element._id;
+    delete element.user_id;
+    delete element.password;
+    delete element.cart;
+    delete element.id;
+    delete element.documents;
+    delete element.last_connection;
+    docDtoWeb.push(element);
+  });
+  return docDtoWeb;
+}
+
 export class GenericDao {
   #model;
   constructor(modelMongoose) {
@@ -9,7 +24,6 @@ export class GenericDao {
   }
   async create(model) {
     const result = toPojo(await this.#model.create(model));
-    //delete result._id
     return result;
   }
   async findById(criteria) {
@@ -48,7 +62,7 @@ export class GenericDao {
 
     const respuesta = {
       status: "Success",
-      payload: docs,
+      payload: dtoWeb(docs),
       totalDocs,
       limit,
       page,
@@ -57,45 +71,35 @@ export class GenericDao {
       hasNextPage,
       prevPage,
       nextPage,
-      prevLink:
-        hasPrevPage == true
-          ? `/products?page=${prevPage}`
-          : null,
-      nextLink:
-        hasNextPage == true
-          ? `/products?page=${nextPage}`
-          : null,
+      prevLink: hasPrevPage == true ? `/products?page=${prevPage}` : null,
+      nextLink: hasNextPage == true ? `/products?page=${nextPage}` : null,
     };
     return respuesta;
   }
   async findOne(criteria) {
-    
-      // le saco el lean() para poder actualizar contraseñas si surge un error mas adelante por usar el metodo en otro lado revisar contraseña
-      const result = await this.#model.findOne(criteria);      
-      if(!result){
-        throw new Error('NOT FOUND')
-      }else{
-        return result;
-      }
-      
-   
-
+    // le saco el lean() para poder actualizar contraseñas si surge un error mas adelante por usar el metodo en otro lado revisar contraseña
+    const result = await this.#model.findOne(criteria);
+    if (!result) {
+      throw new Error("NOT FOUND");
+    } else {
+      return result;
+    }
   }
   async updateOne(criteria, newData) {
     const result = await this.#model
-      .findByIdAndUpdate(criteria, newData, {new:true})
+      .findByIdAndUpdate(criteria, newData, { new: true })
       .lean();
     if (!result) throw new Error("NOT FOUND");
     return result;
   }
-  
+
   async deleteOne(criteria) {
     const result = await this.#model.findByIdAndRemove(criteria);
     if (!result) throw new Error("NOT FOUND");
     return result;
   }
-  
-  async findByIdPopulate(criteria, tabla) { 
+
+  async findByIdPopulate(criteria, tabla) {
     const result = await this.#model
       .findById(criteria)
       .populate({ path: `${tabla}`, strictPopulate: false })
@@ -103,8 +107,8 @@ export class GenericDao {
     if (!result) throw new Error("NOT FOUND");
     return result;
   }
-  async insertMany(criteria){
-    const result = await this.#model.insertMany(criteria)
+  async insertMany(criteria) {
+    const result = await this.#model.insertMany(criteria);
     return result;
   }
 }

@@ -95,4 +95,13 @@ export class User {
       last_connection: this.#last_connection,
     };
   }
+  datosUserWeb() {
+    return {      
+      name: this.#name,
+      lastName: this.#lastName,
+      email: this.#email,
+      age: this.#age,     
+      rol: this.#rol,      
+    };
+  }
 }

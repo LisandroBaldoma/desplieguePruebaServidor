@@ -108,25 +108,27 @@ class UsersService {
   }
   async saveDocuments(document, uid){
     const user = await userRepository.findById(uid)
-    console.log(user)
-    console.log(document)
-
+    
     const documents = {
-      name: document[0].documents.fieldname,
-      reference: document.documents.path
+      name: document['documents'][0].fieldname,
+      reference: document['documents'][0].path
     }
     const profiles = {
-      name: document[1].profiles.fieldname,
-      reference: document.profiles.path
+      name: document['profiles'][0].fieldname,
+      reference: document['profiles'][0].path
     } 
     const products = {
-      name: document[2].products.fieldname,
-      reference: document.products.path
+      name: document['products'][0].fieldname,
+      reference: document['products'][0].path
     }   
 
     user.documents.push(documents,profiles,products)
     user.save()
+
+    return user.documents
   }
+
+  
 }
 
 export const usersService = new UsersService();
