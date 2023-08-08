@@ -18,7 +18,7 @@ apiRouters.use('/docs', docsRouter)
 
 apiRouters.use('/products', productsRouter) 
 apiRouters.use('/carts', cartRouter)
-apiRouters.use('/user', userRouter )
+apiRouters.use('/users', userRouter )
 apiRouters.use('/sessions', sessionsRouter) // http://localhost:8080/api/sessions
 
 //apiRouters.use('/', testRouter)
