@@ -10,8 +10,7 @@ function dtoWeb(docs) {
     delete element.password;
     delete element.cart;
     delete element.id;
-    delete element.documents;
-    delete element.last_connection;
+    delete element.documents;    
     docDtoWeb.push(element);
   });
   return docDtoWeb;
@@ -30,6 +29,11 @@ export class GenericDao {
     const result = await this.#model.findById(criteria);
     if (!result) throw new Error("NOT FOUND");
     return result;
+  }
+  async findAll(){
+    const result = await this.#model.find();
+    if(!result) throw new Error("NOT FOUND");
+    return result
   }
   async find(params) {
     console.log("metodo find");

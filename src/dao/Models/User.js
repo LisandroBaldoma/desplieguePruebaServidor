@@ -22,7 +22,7 @@ export class User {
     password,
     rol,
     documents,
-    last_connection = new Date(),
+    last_connection = new Date().toLocaleString(),
   }) {
     this.#user_id = user_id;
     this.#name = name;

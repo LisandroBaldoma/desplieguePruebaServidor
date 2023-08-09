@@ -78,3 +78,12 @@ export async function handlePostUploadDocuments(req, res, next){
     
   }
 }
+
+export async function handletDeleteUser(req, res, next){
+  console.log('Eliminar usuario')
+  try {
+    const userDelete = await usersService.deleteUser(req.params.uid)
+  } catch (error) {
+    
+  }
+}

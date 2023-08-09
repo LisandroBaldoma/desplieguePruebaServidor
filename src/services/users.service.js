@@ -1,5 +1,6 @@
 import { Cart } from "../dao/Models/Cart.js";
 import { User } from "../dao/Models/User.js";
+import { userManager } from "../dao/mongoodb/user.manager.js";
 import { cartRpository } from "../repositories/cart.repository.js";
 import { userRepository } from "../repositories/user.repository.js";
 import {
@@ -126,6 +127,41 @@ class UsersService {
     user.save()
 
     return user.documents
+  }
+  async deleteUser(uid){
+    console.log('funcion para eliminar usuarios')
+    // const user = await userRepository.findById(uid)
+    const users = await userManager.findAll();
+    // console.log(users)
+    users.forEach(async element => {
+      
+      let fecha1 = new Date(element.last_connection)
+      let fecha2 = new Date()
+      let diferencia = fecha1.getTime() - fecha2.getTime();
+      let diasDeDiferencia = diferencia / 1000 / 60 / 60 / 24;
+      if(diasDeDiferencia > 30){
+        console.log('usuario con actividad')
+        
+      }else{
+        let option = {
+          from: "lrsolucionesintegrales@gmail.com",
+          to: element.email, // list of receivers
+          subject: "Hello ✔", // Subject line
+          text: "Su usuario ha sido eliminado, por falta de actividad", // plain text body
+          html: `<div> <h3>Su usuario ha sido eliminado, por falta de actividad</h3> </div>`,
+        };
+        let respuesta = await emailService.send(option);
+        console.log(respuesta)
+        console.log('Usuario sin acividad eliminar')
+        let userDelete = await userRepository.deleteOne(element._id)
+        console.log(userDelete)
+        console.log('Usuario Eliminado')
+      } 
+      
+    });
+    
+    
+    
   }
 
   

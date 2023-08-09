@@ -9,6 +9,9 @@ export class GenericRepository {
   find(criteria, options) {
     return this.#dao.find(criteria);
   }
+  findAll(){
+    return this.#dao.findAll();
+  }
   findById(criteria, options) {
     return this.#dao.findById(criteria);
   }

@@ -5,7 +5,8 @@ import {
   handletEmailPassword,  
   handletPostPasswordUpdate,
   handlePostUploadDocuments,
-  handletgetCambiarRol
+  handletgetCambiarRol,
+  handletDeleteUser
   
 } from "../../controllers/api/users.Controller.js";
 import {  
@@ -26,4 +27,6 @@ userRouter.get("/premium/:uid", handletgetCambiarRol)
 userRouter.post("/passwordupdate", handletPostPasswordUpdate)
 
 userRouter.post("/emailpassword", handletEmailPassword)
+
+userRouter.put('/delete', handletDeleteUser)
 

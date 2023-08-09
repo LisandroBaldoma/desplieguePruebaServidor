@@ -23,7 +23,7 @@ form.addEventListener(
         email: email.value,
         password: password.value,
       };
-      const response = await fetch("/api/user", {
+      const response = await fetch("/api/users", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {

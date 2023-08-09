@@ -28,6 +28,8 @@ passport.use(
       }        
       console.log(user)
       delete user.password;
+      user.last_connection = new Date().toLocaleString()
+      user.save()
       //console.log(user)
       done(null, user);
     }
