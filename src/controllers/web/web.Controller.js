@@ -22,8 +22,9 @@ export function registerView(req, res, next) {
 }
 
 export function profileView(req, res, next) {
+  console.log(req.user)
   res.render("profile", {
-    title: "Profile",
+    title: "Profile",    
     user: req.user,
   });
 }

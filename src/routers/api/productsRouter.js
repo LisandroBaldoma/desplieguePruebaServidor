@@ -20,4 +20,4 @@ productsRouter.post("/", productsAdddAction, handlePost);
 
 productsRouter.put("/:id", productsDeletedAction, handlePut);
 
-productsRouter.delete("/:id", productsDeletedAction, handleDelete);
+productsRouter.delete("/:pid", productsDeletedAction, handleDelete);

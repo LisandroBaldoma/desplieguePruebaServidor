@@ -24,11 +24,10 @@ export async function handleGet(req, res, next) {
   try {
     if (req.params.id) {
       const user = await userRepository.findByIdPopulate(req.params.id, "cart");
-      res.json(user);
+      res.status(200).json(user);
     } else {
-      console.log('prueba users dto')
-      const users = await userRepository.find(req.query);     
-      res.json(users);
+      const users = await userRepository.find(req.query);
+      res.status(200).json(users);
     }
   } catch (error) {
     next(error);
@@ -37,13 +36,12 @@ export async function handleGet(req, res, next) {
 
 export async function handletgetCambiarRol(req, res, next) {
   try {
-    console.log(req.params.uid);
     const respuesta = await usersService.updateRol(req.params.uid);
     if (respuesta.hasOwnProperty("payload")) {
       req.user.rol = respuesta.payload;
-      res.json(respuesta);
+      res.status(200).json(respuesta);
     } else {
-      res.json(respuesta);
+      res.status(200).json(respuesta);
     }
   } catch (error) {
     next();
@@ -53,37 +51,31 @@ export async function handletgetCambiarRol(req, res, next) {
 export async function handletPostPasswordUpdate(req, res, next) {
   try {
     const respuesta = await usersService.updatePasswordUser(req.body);
-    res.status(200).json(respuesta)
+    res.status(200).json(respuesta);
   } catch (error) {
     next(error);
   }
 }
 
 export async function handletEmailPassword(req, res, next) {
- console.log('enviar mail')
- try {
-  const respuesta = await usersService.enviarEmailPasswordUpdate(req.body)
-  res.status(200).json(respuesta)
- } catch (error) {
-  
- }
+  try {
+    const respuesta = await usersService.enviarEmailPasswordUpdate(req.body);
+    res.status(200).json(respuesta);
+  } catch (error) {}
 }
 
-export async function handlePostUploadDocuments(req, res, next){
-  console.log('subir documentos')  
+export async function handlePostUploadDocuments(req, res, next) {
   try {
-    const documents = await usersService.saveDocuments(req.files, req.params.uid)
-    res.status(200).json(documents)
-  } catch (error) {
-    
-  }
+    const documents = await usersService.saveDocuments(
+      req.files,
+      req.params.uid
+    );
+    res.status(200).json(documents);
+  } catch (error) {}
 }
 
-export async function handletDeleteUser(req, res, next){
-  console.log('Eliminar usuario')
+export async function handletDeleteUser(req, res, next) {
   try {
-    const userDelete = await usersService.deleteUser(req.params.uid)
-  } catch (error) {
-    
-  }
+    const userDelete = await usersService.deleteUser(req.params.uid);
+  } catch (error) {}
 }

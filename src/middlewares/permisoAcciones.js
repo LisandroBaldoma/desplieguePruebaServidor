@@ -3,14 +3,12 @@ import { ErrorDePermisos } from "../dao/Models/errors/ErrorDePermisos.js";
 import { productsRepository } from "../repositories/product.respository.js";
 
 export async function productsDeletedAction(req, res, next) {
-  console.log(req.user);
   if (!req.isAuthenticated()) {
     return next(new ErrorDeAutenticacion());
   } else if (req.user.rol === "premium") {
     console.log("ROL PREMIUM");
     try {
-      let product = await productsRepository.findById(req.params.id);
-      console.log(product);
+      let product = await productsRepository.findById(req.params.pid);
       if (product.owner === req.user.email) {
         next();
       } else {
@@ -26,7 +24,6 @@ export async function productsDeletedAction(req, res, next) {
 
     // return next(new ErrorDePermisos('No tienes permisos de Admin'))
   } else if (req.user.rol === "user") {
-    console.log("ROL USER");
     return next(
       new ErrorDePermisos(
         "Solo tienes permiso de Usuario, para eliminar productos debes tener permiso de Administrador"
@@ -44,8 +41,6 @@ export async function productsDeletedAction(req, res, next) {
 }
 
 export function addcartAction(req, res, next) {
-  //console.log(req.params.cid)
-  //console.log(req.user.cart)
   if (!req.isAuthenticated()) {
     return next(new ErrorDeAutenticacion());
   }
@@ -60,7 +55,6 @@ export function addcartAction(req, res, next) {
 }
 
 export async function productsAdddAction(req, res, next) {
-  console.log(req.user);
   if (!req.isAuthenticated()) {
     return next(new ErrorDeAutenticacion());
   }

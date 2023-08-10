@@ -7,8 +7,6 @@ const cartTestingId = document.querySelector("#cartTesting");
 const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
 const cartUser = document.querySelector("#cartUser");
 
-console.log(cartUser);
-
 if (formAddProduct instanceof HTMLFormElement) {
   formAddProduct.addEventListener("submit", (event) => {
     event.preventDefault();

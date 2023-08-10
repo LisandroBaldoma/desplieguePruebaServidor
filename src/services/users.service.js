@@ -1,7 +1,6 @@
 import { Cart } from "../dao/Models/Cart.js";
 import { User } from "../dao/Models/User.js";
 import { userManager } from "../dao/mongoodb/user.manager.js";
-import { cartRpository } from "../repositories/cart.repository.js";
 import { userRepository } from "../repositories/user.repository.js";
 import {
   ValidarPassword,
@@ -107,42 +106,37 @@ class UsersService {
 
     return respuesta;
   }
-  async saveDocuments(document, uid){
-    const user = await userRepository.findById(uid)
-    
+  async saveDocuments(document, uid) {
+    const user = await userRepository.findById(uid);
+
     const documents = {
-      name: document['documents'][0].fieldname,
-      reference: document['documents'][0].path
-    }
+      name: document["documents"][0].fieldname,
+      reference: document["documents"][0].path,
+    };
     const profiles = {
-      name: document['profiles'][0].fieldname,
-      reference: document['profiles'][0].path
-    } 
+      name: document["profiles"][0].fieldname,
+      reference: document["profiles"][0].path,
+    };
     const products = {
-      name: document['products'][0].fieldname,
-      reference: document['products'][0].path
-    }   
+      name: document["products"][0].fieldname,
+      reference: document["products"][0].path,
+    };
 
-    user.documents.push(documents,profiles,products)
-    user.save()
+    user.documents.push(documents, profiles, products);
+    user.save();
 
-    return user.documents
+    return user.documents;
   }
-  async deleteUser(uid){
-    console.log('funcion para eliminar usuarios')
-    // const user = await userRepository.findById(uid)
+  async deleteUser() {
     const users = await userManager.findAll();
-    // console.log(users)
-    users.forEach(async element => {
-      
-      let fecha1 = new Date(element.last_connection)
-      let fecha2 = new Date()
+    users.forEach(async (element) => {
+      let fecha1 = new Date(element.last_connection);
+      let fecha2 = new Date();
       let diferencia = fecha1.getTime() - fecha2.getTime();
       let diasDeDiferencia = diferencia / 1000 / 60 / 60 / 24;
-      if(diasDeDiferencia > 30){
-        console.log('usuario con actividad')
-        
-      }else{
+      if (diasDeDiferencia > 30) {
+        console.log("usuario con actividad");
+      } else {
         let option = {
           from: "lrsolucionesintegrales@gmail.com",
           to: element.email, // list of receivers
@@ -151,20 +145,10 @@ class UsersService {
           html: `<div> <h3>Su usuario ha sido eliminado, por falta de actividad</h3> </div>`,
         };
         let respuesta = await emailService.send(option);
-        console.log(respuesta)
-        console.log('Usuario sin acividad eliminar')
-        let userDelete = await userRepository.deleteOne(element._id)
-        console.log(userDelete)
-        console.log('Usuario Eliminado')
-      } 
-      
+        let userDelete = await userRepository.deleteOne(element._id);        
+      }
     });
-    
-    
-    
   }
-
-  
 }
 
 export const usersService = new UsersService();
