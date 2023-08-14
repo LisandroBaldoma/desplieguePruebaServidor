@@ -96,6 +96,7 @@ export async function handlePostUploadDocuments(req, res, next) {
 export async function handletDeleteUser(req, res, next) {
   try {
     const userDelete = await usersService.deleteUser(req.params.uid);
+    res.status(201).json({message:'Usuarios sin actividad Elimindos y envios de correo', payload: userDelete})
   } catch (error) {}
 }
 

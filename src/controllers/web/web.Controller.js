@@ -1,5 +1,6 @@
 import { cartManager } from "../../dao/mongoodb/cart.manager.js";
 import { productsManager } from "../../dao/mongoodb/product.manager.js";
+import { userManager } from "../../dao/mongoodb/user.manager.js";
 import { cartRpository } from "../../repositories/cart.repository.js";
 import { productsRepository } from "../../repositories/product.respository.js";
 
@@ -92,6 +93,24 @@ export async function configView(req, res, next) {
       // productsList: respuesta.payload,
       // data: respuesta,
       user: req.user,
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+export async function userEditView(req, res, next) {
+  try {
+    const users = await userManager.find();
+    console.log(users)
+    // console.log(respuesta.payload)
+    res.render("userEditView", {
+      title: "User Edit View",
+      // products: respuesta.payload.length > 0,
+      // productsList: respuesta.payload,
+      // data: respuesta,
+      // users: users.length > 0,
+      // usersList: users,
     });
   } catch (error) {
     next(error);

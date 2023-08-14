@@ -1,0 +1,209 @@
+<div class="d-flex gap-4 p-3 flex-column">
+
+  <h1 class="text-center">E-commerce</h1>
+
+  <h2 class="text-center">Bienvenido: {{user.name}}, {{user.lastName}}</h2>
+
+<div class="d-flex justify-content-evenly
+">
+  <form id="formLogout2">
+    <button class="btn btn-outline-danger"type="submit">Logout</button>
+  </form>
+
+  <a href="/profile">
+    <button type="button" class="btn btn-outline-primary">Profile</button>
+  </a>
+
+  <a href="/">
+    <button type="button" class="btn btn-outline-secondary">Home</button>
+  </a>
+
+</div>
+
+</div>
+
+</div>
+
+<h2 class="text-center">Lista de productos</h2>
+
+<div class="container pt-5" id="tableContainer">
+  <table id="example" class="table table-sm table-hover table-bordered" style="width:100%">
+
+<thead>
+  <tr>
+    {{!-- <th>Id</th> --}}
+    <th>nombre</th>
+    <th>apellido</th>
+    <th>rol</th>   
+    <th>Accion</th>    
+  </tr>
+</thead>
+<tbody id="bodyProductsList">        
+  {{#if users}}
+    {{#each usersList}}
+      <tr>
+        {{!-- <th>{{this._id}}</th> --}}
+        <td>{{this.name}}</td>
+        <td>{{this.lastName}}</td>
+        <td>{{this.rol}}</td>        
+        <td>
+          {{!-- <button id={{this._id }} class="btn btn-secondary btnAddCart">AddCart</button> --}}
+          <button type="button" class="btn btn-secondary btnAddCart" id="">eliminar</button>
+        </td>        
+      </tr>
+    {{/each}}
+  {{else}}
+    <p>No hay productos para mostrar</p>
+  {{/if}}
+</tbody>
+</table>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    {{#if data.hasPrevPage}}
+    <li class="page-item"><a class="page-link" href="{{data.prevLink}}">Prev</a></li>
+    {{/if}}   
+    <li class="page-item"><a class="page-link" href=>Pagina {{data.page}} de {{data.totalPages}}</a></li>       
+    {{#if data.hasNextPage}}
+    <li class="page-item"><a class="page-link" href="{{data.nextLink}}">Next</a></li>
+    {{/if}}
+  </ul>
+  <p>Total de productos {{data.totalDocs}}</p>
+</nav>  
+</div>
+
+<!-- Modal Add Product -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="row g-3 needs-validation justify-content-center" 
+          id="formAddProduct"
+          novalidate
+        >
+          <div class="row text-center">
+            <div class="col-6">
+              <label for="input_title" class="form-label">Title</label>
+              <input
+                name="title"
+                type="text"
+                class="form-control"
+                id="input_title"
+                value=""
+                required
+              />
+            </div>
+            <div class="col-6">
+              <label for="input_Description" class="form-label">Description</label>
+              <input
+                name="description"
+                type="text"
+                class="form-control"
+                id="input_description"
+                value=""
+                required
+              />
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-6">
+              <label for="input_stock" class="form-label">Stock</label>
+              <input
+                name="stock"
+                type="number"
+                class="form-control"
+                id="input_stock"
+                value=""
+                required
+              />
+            </div>
+            <div class="col-6">
+              <label for="input_price"class="form-label">Price</label>
+              <input
+                 name="price" 
+                type="number"
+                class="form-control"
+                id="input_price"
+                value=""
+                required
+              />
+
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-6">
+              <label for="code" class="form-label">Code</label>
+              <input
+                name="code"
+                type="text"
+                class="form-control"
+                id="input_code"
+                value=""
+                required
+              />
+            </div>
+            <div class="col-6">
+              <label for="input_category" class="form-label">Category</label>
+              <input
+                 name="category"
+                type="text"
+                class="form-control"
+                id="input_category"
+                value=""
+                required
+              />
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-6">
+              <label for="input_thumbnails" class="form-label">Thumbnails</label>
+              <input
+                name="thumbnails"
+                type="text"
+                class="form-control"
+                id="input_thumbnails"
+                value="Sin-Imagen"
+              />
+            </div>
+            <div class="col-6">
+              <label for="stainput_tus">status</label>
+              <select name="status" class="form-select" id="input_status" required>
+                <option selected disabled value="">Selecciones...</option>
+                <option>true</option>
+                <option>false</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="btnAddProductForm">Agregar
+          Producto</button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >Close</button>
+      </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/static/js/userEditView.js"></script>
