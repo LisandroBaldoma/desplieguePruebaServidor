@@ -6,7 +6,7 @@ export async function productsDeletedAction(req, res, next) {
   if (!req.isAuthenticated()) {
     return next(new ErrorDeAutenticacion());
   } else if (req.user.rol === "premium") {
-    console.log("ROL PREMIUM");
+    // console.log("ROL PREMIUM");
     try {
       let product = await productsRepository.findById(req.params.pid);
       if (product.owner === req.user.email) {

@@ -1,4 +1,4 @@
-console.log("estoy usando handlebars desde el front CONFGI-VIEW");
+// console.log("estoy usando handlebars desde el front CONFGI-VIEW");
 
 const updateRol = document.getElementById("updateRol");
 const btnUpdtaeRol = document.getElementById("btnUpdtaeRol");
@@ -9,12 +9,12 @@ const userId = document.getElementById("userId");
 
 const btnDeleteUser = document.getElementById("btnDeletedUser");
 
-console.log(btnDeleteUser)
+// console.log(btnDeleteUser)
 
 btnUpdtaeRol.addEventListener("click", async (event) => {
   event.preventDefault();
-  console.log("updateRol");
-  console.log(updateRol);
+  // console.log("updateRol");
+  // console.log(updateRol);
   if (updateRol.classList == "d-none") {
     updateRol.classList.remove("d-none");
   } else {
@@ -25,14 +25,14 @@ btnUpdtaeRol.addEventListener("click", async (event) => {
 nuevoRol.addEventListener("change", async (event) => {
   event.preventDefault();
   // console.log('updateRol')
-  console.log(nuevoRol.value);
+  // console.log(nuevoRol.value);
   if (nuevoRol.value == 1) {
     postNewRol(userId.value, "user");
   } else if (nuevoRol.value == 2) {
-    console.log("NUEVO ROL ADMIN");
+    // console.log("NUEVO ROL ADMIN");
     postNewRol(userId.value, "admin");
   } else if (nuevoRol.value == 3) {
-    console.log("NUEVO ROL PREMIUM");
+    // console.log("NUEVO ROL PREMIUM");
     postNewRol(userId.value, "premium");
   } else {
     alert("Debe seleccionar un Rol");
@@ -46,17 +46,17 @@ async function postNewRol(id, rol) {
     });
 
     if (status == 201) {
-      console.log("El rol fue actualizado");
+      // console.log("El rol fue actualizado");
       location.reload();
     } else {
-      console.log("[logout] estado inesperado: " + status);
+      // console.log("[logout] estado inesperado: " + status);
     }
   }
 
 
   btnDeleteUser.addEventListener("click", async (event) => {
     event.preventDefault();
-    console.log('Eliminar usuario ID')
+    // console.log('Eliminar usuario ID')
     Swal.fire({
         title: 'Esta seguro de querer eliminar el usuario?',
         text: "Si continua el usuario sera eleminado!",
@@ -71,7 +71,7 @@ async function postNewRol(id, rol) {
                 method: "PUT",
               });
 
-              console.log(status)
+              // console.log(status)
 
           if(status == 201){
             Swal.fire(

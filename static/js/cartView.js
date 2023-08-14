@@ -1,4 +1,4 @@
-console.log("estamos adentro con JS");
+// console.log("estamos adentro con JS");
 
 const btnComprar = document.getElementById("btnComprar");
 const cart = document.getElementById("cartId");
@@ -7,7 +7,7 @@ const carritoContenedor = document.getElementById("carritoContenedor");
 const btnVolver = document.getElementById("btnVolver");
 const btnVaciarCarrito = document.getElementById("btnVaciarCrrito");
 
-console.log(btnVaciarCarrito);
+// console.log(btnVaciarCarrito);
 const cartId = cart.value;
 
 let detalleCompra = "";
@@ -16,7 +16,7 @@ let detalleProductos = "";
 if (btnVaciarCarrito instanceof HTMLButtonElement) {
   btnVaciarCarrito.addEventListener("click", async (event) => {
     event.preventDefault();
-    console.log(cartId);
+    // console.log(cartId);
     const { status } = await fetch(
       `/api/carts/${cartId}`,
       {
@@ -27,7 +27,7 @@ if (btnVaciarCarrito instanceof HTMLButtonElement) {
     if (status === 200) {
       window.location.href = `/carts/${cartId}`;
     } else {
-      console.log("[logout] estado inesperado: " + status);
+      // console.log("[logout] estado inesperado: " + status);
     }
   });
 }
@@ -51,9 +51,9 @@ if (btnComprar instanceof HTMLButtonElement) {
         }
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         compraContenedor.insertAdjacentHTML("afterend", detalleCompra);
-        console.log(detalleCompra);
+        // console.log(detalleCompra);
         if (data.tipo === 0) {
           detalleCompra = `                
                 <div class="card text-center m-5">

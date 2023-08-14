@@ -35,7 +35,7 @@ export class GenericDao {
     return result
   }
   async find(params) {
-    console.log("metodo find");
+    // console.log("metodo find");
     //PAGINACION
     let opcion;
 

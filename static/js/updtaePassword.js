@@ -1,4 +1,4 @@
-console.log("estoy en update passsword")
+// console.log("estoy en update passsword")
 
 const formLogin = document.querySelector('#formupdatePasword')
 
@@ -33,7 +33,7 @@ if (formLogin instanceof HTMLFormElement) {
         body: JSON.stringify(datosUsuario)        
       })
       
-      console.log(respuesta)
+      // console.log(respuesta)
       if (respuesta.status === 200) {
         alert('La contraseña fue actualizada con exito, en segundos sera redireccionado a la pagina de Login')
         setTimeout(function(){

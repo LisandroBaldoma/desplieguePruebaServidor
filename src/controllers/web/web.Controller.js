@@ -24,7 +24,7 @@ export function registerView(req, res, next) {
 }
 
 export function profileView(req, res, next) {
-  console.log(req.user)
+  // console.log(req.user)
   res.render("profile", {
     title: "Profile",    
     user: req.user,
@@ -34,8 +34,8 @@ export function profileView(req, res, next) {
 export async function productsView(req, res, next) {
   try {
     const respuesta = await productsRepository.find(req.query);
-    console.log(req.user)
-    console.log(respuesta.payload)
+    // console.log(req.user)
+    // console.log(respuesta.payload)
     res.render("products", {
       title: "Prodcust",
       products: respuesta.payload.length > 0,

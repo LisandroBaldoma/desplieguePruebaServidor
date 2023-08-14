@@ -32,10 +32,10 @@ class EmailService {
       const mailOptions = options
     try {
       const info = await this.#clienteNodemailer.sendMail(mailOptions)
-      console.log(info)
+      // console.log(info)
       return info
     } catch (error) {
-      console.log(error)
+      // console.log(error)
       throw error
     }
   }

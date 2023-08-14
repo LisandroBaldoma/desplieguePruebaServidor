@@ -18,7 +18,7 @@ export async function handleGet(req, res, next) {
       res.status(200).json(result);
     } else {
       const result = await productsRepository.find(req.query);
-      console.log(req.query);
+      // console.log(req.query);
       res.status(200).json(result);
     }
   } catch (error) {

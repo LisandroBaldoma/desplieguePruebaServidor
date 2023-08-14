@@ -49,7 +49,7 @@ export async function handletgetCambiarRol(req, res, next) {
 }
 
 export async function handletgetUpdateRol(req, res, next) {
-  console.log('update rol')
+  // console.log('update rol')
   
   try {
     const respuesta = await usersService.updateRolWeb(req.params.uid, req.params.rol);        
@@ -102,7 +102,7 @@ export async function handletDeleteUser(req, res, next) {
 
 export async function handletDeleteUserId(req, res, next) {  
   try {
-    console.log(req.params)
+    // console.log(req.params)
     const userDelete = await usersService.deleteUserId(req.params.uid);
     res.status(201).json({message:'Usuario Eliminado', payload:userDelete})
   } catch (error) {}

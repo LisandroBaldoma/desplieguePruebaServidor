@@ -27,7 +27,7 @@ passport.use(
         if (!ValidarPassword(password, user.password)){
           return done(new ErrorDeAutenticacion());
         }        
-        console.log(user)
+        // console.log(user)
         delete user.password;
         user.last_connection = new Date().toLocaleString()
         user.save()

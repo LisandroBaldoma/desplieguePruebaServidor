@@ -33,9 +33,9 @@ export class CartManagerFS {
       return newCart
     }  
     async getCartById (cid){
-      console.log(cid)
+      // console.log(cid)
       await this.#readCart()
-      console.log(this.#carts)
+      // console.log(this.#carts)
       const cart = this.#carts.find((cart) => cart.id === cid)
       if(!cart){
         throw new Error("ID no existe")

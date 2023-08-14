@@ -17,7 +17,7 @@ class ProductManagerFS {
     await fs.writeFile(this.#ruta, json);
   }
   async find() {
-    console.log("getproducts fs");
+    // console.log("getproducts fs");
     await this.#readProducts();
     if (this.#products.length === 0) {
       return this.#products;

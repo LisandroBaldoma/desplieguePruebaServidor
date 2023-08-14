@@ -1,4 +1,4 @@
-console.log("dentro de profile con JS")
+// console.log("dentro de profile con JS")
 
 const formLogout = document.querySelector('#formLogout')
 

@@ -1,4 +1,4 @@
-console.log('UserEditiew')
+// console.log('UserEditiew')
 
 const formAddProduct = document.querySelector("#formAddProduct");
 const buttonAddCart = document.getElementsByClassName("btnAddCart");
@@ -20,7 +20,7 @@ if (formAddProduct instanceof HTMLFormElement) {
         "Content-Type": "application/json",
       },
     }).then((response) => {
-      console.log(response)
+      // console.log(response)
       if(response.status == 403){
         alert("Solo pueden crear productos los usuarios con permiso de Administrador");
         myModal.toggle();

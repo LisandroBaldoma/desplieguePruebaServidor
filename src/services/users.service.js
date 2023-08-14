@@ -13,7 +13,7 @@ import { emailService } from "./email.service.js";
 
 class UsersService {
   async registerUser(user) {
-    console.log(user)
+    // console.log(user)
     const datosNewUser = user;
     datosNewUser.password = hashearPassword(datosNewUser.password);
 
@@ -28,9 +28,9 @@ class UsersService {
   }
   async updateRol(uid) {
     let respuesta;
-    console.log("CAMBIAR ROL DE USUARIO");
+    // console.log("CAMBIAR ROL DE USUARIO");
     const user = await userRepository.findById(uid);
-    console.log(user);
+    // console.log(user);
     if (user.rol === "premium") {
       user.rol = "user";
       user.save();
@@ -99,11 +99,11 @@ class UsersService {
     // TODO UPDATE CONTRASEÑA
   }
   async enviarEmailPasswordUpdate(datos) {
-    console.log(datos.email);
+    // console.log(datos.email);
 
     const token = generarToken(datos);
 
-    console.log(token);
+    // console.log(token);
     let option = {
       from: "lrsolucionesintegrales@gmail.com",
       to: datos.email, // list of receivers
@@ -149,7 +149,7 @@ class UsersService {
       let diferencia = fecha1.getTime() - fecha2.getTime();
       let diasDeDiferencia = diferencia / 1000 / 60 / 60 / 24;
       if (diasDeDiferencia > 30) {
-        console.log("usuario con actividad");
+        // console.log("usuario con actividad");
       } else {
         let option = {
           from: "lrsolucionesintegrales@gmail.com",
