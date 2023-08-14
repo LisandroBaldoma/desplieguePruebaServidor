@@ -1,0 +1,57 @@
+<div class="d-flex justify-content-center flex-column align-items-center">
+  <h1>CONFIGURACION</h1>
+
+  <div class="card text-center col-6 mt-3">
+    <div class="card-header">
+      PROFILE
+    </div>
+    <div class="card-body">
+      <input type="hidden" id="userId" value={{user._id}} />
+      <h5 class="card-title">Datos perfil usuario</h5>
+      <p class="card-text">Nombre completo: {{user.name}}, {{user.lastName}}</p>
+      <p class="card-text">Correo electronico: {{user.email}}</p>
+      <p class="card-text">Rol:
+        {{user.rol}}<button
+          type="button"
+          class="btn btn-primary btn-sm m-4"
+          id="btnUpdtaeRol"
+        >Update Rol</button>
+      </p>
+      <button
+          type="button"
+          class="btn btn-danger btn-sm m-4"
+          id="btnDeletedUser"
+        >Eliminar Usario</button>
+
+      <div class="d-none" id="updateRol">
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          id="nuevoRol"
+        >
+          <option selected>Seleccione nuevo Rol</option>
+          <option value="1">user</option>
+          <option value="2">admin</option>
+          <option value="3">premium</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+      Ultima Conexion:
+      {{user.last_connection}}
+    </div>
+    <div class="m-5">
+      <a class="btn btn-primary" href="/profile" role="button">Profile</a>    
+
+      <a href="/">
+        <button type="button" class="btn btn-secondary">Home</button>
+      </a>
+
+      <a class="btn btn-primary" href="/products" role="button">E-commerce</a>
+    </div>
+
+  </div>
+</div>
+
+<script src="static/js/config.js"></script>

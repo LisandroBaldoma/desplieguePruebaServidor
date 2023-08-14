@@ -1,21 +1,30 @@
-<div class="d-flex gap-4 p-3">
-<h2>Bienvenido: {{user.name}}, {{user.lastName}}</h2>
-<form id="formLogout2">
-  <button class="btn btn-outline-danger"type="submit">Logout</button>
-</form>
+<div class="d-flex gap-4 p-3 flex-column">
 
-<a href="/profile">
-<button type="button" class="btn btn-outline-primary">Profile</button>
-</a>
+  <h1 class="text-center">E-commerce</h1>
 
-<a href="/">
-<button type="button" class="btn btn-outline-secondary">Home</button>
-</a>
+  <h2 class="text-center">Bienvenido: {{user.name}}, {{user.lastName}}</h2>
+
+<div class="d-flex justify-content-evenly
+">
+  <form id="formLogout2">
+    <button class="btn btn-outline-danger"type="submit">Logout</button>
+  </form>
+
+  <a href="/profile">
+    <button type="button" class="btn btn-outline-primary">Profile</button>
+  </a>
+
+  <a href="/">
+    <button type="button" class="btn btn-outline-secondary">Home</button>
+  </a>
+
 </div>
 
 </div>
 
-<h1 class="text-center">Lista de productos</h1>
+</div>
+
+<h2 class="text-center">Lista de productos</h2>
 
 <div class="container pt-5" id="tableContainer">
   <table id="example" class="table table-sm table-hover table-bordered" style="width:100%">
@@ -49,14 +58,14 @@
 </div>
 <thead>
   <tr>
-    <th>Id</th>
+    {{!-- <th>Id</th> --}}
     <th>Title</th>
     <th>Description</th>
     <th>Stock</th>
     <th>Code</th>
     <th>Price</th>
-    <th>Status</th>
-    <th>thumbnails</th>
+    {{!-- <th>Status</th>
+    <th>thumbnails</th> --}}
     <th>Category</th>
     <th>Accion</th>    
   </tr>
@@ -65,17 +74,18 @@
   {{#if products}}
     {{#each productsList}}
       <tr>
-        <th>{{this._id}}</th>
+        {{!-- <th>{{this._id}}</th> --}}
         <td>{{this.title}}</td>
         <td>{{this.description}}</td>
         <td>{{this.stock}}</td>
         <td>{{this.code}}</td>
-        <td>{{this.price}}</td>
-        <td>{{this.status}}</td>
-        <td>{{this.thumbnails}}</td>
+        <td>$ {{this.price}}</td>
+        {{!-- <td>{{this.status}}</td>
+        <td>{{this.thumbnails}}</td> --}}
         <td>{{this.category}}</td>
         <td>
-          <button id={{this._id }} class="btn btn-secondary btnAddCart">AddCart</button>
+          {{!-- <button id={{this._id }} class="btn btn-secondary btnAddCart">AddCart</button> --}}
+          <button type="button" class="btn btn-secondary btnAddCart" id={{this._id}}>AddCart</button>
         </td>        
       </tr>
     {{/each}}

@@ -17,21 +17,26 @@ passport.use(
     { usernameField: "email" },
     async (username, password, done) => {
       //console.log(username, password);
-
-      const user = await userRepository.findOne({ email: username });
-      //console.log("Este es el usuaario que tenria que encontrar", user);
-      if (!user) {
-        return done(new ErrorDeAutenticacion());
+      console.log('pasaport login')
+      try {
+        const user = await userRepository.findOne({ email: username });
+        //console.log("Este es el usuaario que tenria que encontrar", user);
+        if (!user) {
+         return done(new ErrorDeAutenticacion());
+        }
+        if (!ValidarPassword(password, user.password)){
+          return done(new ErrorDeAutenticacion());
+        }        
+        console.log(user)
+        delete user.password;
+        user.last_connection = new Date().toLocaleString()
+        user.save()
+        //console.log(user)
+        done(null, user);
+        
+      } catch (error) {
+       return done(new Error('NOT FOUND ERROR') )
       }
-      if (!ValidarPassword(password, user.password)){
-        return done(new ErrorDeAutenticacion());
-      }        
-      console.log(user)
-      delete user.password;
-      user.last_connection = new Date().toLocaleString()
-      user.save()
-      //console.log(user)
-      done(null, user);
     }
   )
 );

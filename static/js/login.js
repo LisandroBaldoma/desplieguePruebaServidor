@@ -26,13 +26,21 @@ if (formLogin instanceof HTMLFormElement) {
         },
         body: JSON.stringify(datosUsuario)        
       })
-      //console.log(respuesta)
+      
 
-      if (respuesta.status === 201) {
-        window.location.href = '/products'
+      if (respuesta.status == 201) {
+        window.location.href = '/'
       } else {
-        alert("El usuario NO ESTA REGISTRADO EN LA BD")
-        //console.log('[login] estado inesperado: ' + respuesta.status)
+        
+        Swal.fire({
+          icon: 'error',
+          title: 'Lo sentimos...',
+          text: 'El usuario no se encuentra registrado!',
+          
+        })
+       input_email.value = ""
+       input_password.value = ""
+        
       }
     }
   })

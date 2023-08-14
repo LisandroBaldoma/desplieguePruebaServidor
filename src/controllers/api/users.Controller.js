@@ -48,6 +48,25 @@ export async function handletgetCambiarRol(req, res, next) {
   }
 }
 
+export async function handletgetUpdateRol(req, res, next) {
+  console.log('update rol')
+  
+  try {
+    const respuesta = await usersService.updateRolWeb(req.params.uid, req.params.rol);        
+    req.login(respuesta, (error) => {
+      if (error) {
+        next(new ErrorDeAutenticacion());
+      } else {
+        res.status(201).json(req.user);        
+      }
+    });
+    
+    
+  } catch (error) {
+    next();
+  }
+}
+
 export async function handletPostPasswordUpdate(req, res, next) {
   try {
     const respuesta = await usersService.updatePasswordUser(req.body);
@@ -77,5 +96,13 @@ export async function handlePostUploadDocuments(req, res, next) {
 export async function handletDeleteUser(req, res, next) {
   try {
     const userDelete = await usersService.deleteUser(req.params.uid);
+  } catch (error) {}
+}
+
+export async function handletDeleteUserId(req, res, next) {  
+  try {
+    console.log(req.params)
+    const userDelete = await usersService.deleteUserId(req.params.uid);
+    res.status(201).json({message:'Usuario Eliminado', payload:userDelete})
   } catch (error) {}
 }

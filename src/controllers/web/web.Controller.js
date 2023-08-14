@@ -5,8 +5,9 @@ import { productsRepository } from "../../repositories/product.respository.js";
 
 export function homeView(req, res, next) {
   res.render("home", {
-    body: "Backend NODE JS - EXPRESS - LOGIN - PASSPORT",
-    title: "E-commerce Backend",
+    body: "Backend de una aplicacion E-commerce",
+    title: "Proyecto Final - Comision 39710",
+    subTtitle: "Alumno: Lisandro Baldoma",
     user: req.user,
   });
 }
@@ -32,6 +33,8 @@ export function profileView(req, res, next) {
 export async function productsView(req, res, next) {
   try {
     const respuesta = await productsRepository.find(req.query);
+    console.log(req.user)
+    console.log(respuesta.payload)
     res.render("products", {
       title: "Prodcust",
       products: respuesta.payload.length > 0,
@@ -72,6 +75,23 @@ export async function updatePassword(req, res, next) {
       // productsList: respuesta.payload,
       // data: respuesta,
       // user: req.user,
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+export async function configView(req, res, next) {
+  try {
+    // const respuesta = await productsRepository.find(req.query);
+    console.log(req.user)
+    // console.log(respuesta.payload)
+    res.render("config", {
+      title: "Configurciones",
+      // products: respuesta.payload.length > 0,
+      // productsList: respuesta.payload,
+      // data: respuesta,
+      user: req.user,
     });
   } catch (error) {
     next(error);

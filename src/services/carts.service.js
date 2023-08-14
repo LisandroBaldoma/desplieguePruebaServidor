@@ -9,7 +9,10 @@ class CartsService {
     return result;
   }
 
-  async addProductCart(cid, pid, userMail) {    
+  async addProductCart(cid, pid, userMail) { 
+    console.log('agregar product al carrito')
+    console.log(cid) 
+    console.log(pid)    
     const cart = await cartRpository.findById(cid);
     const prod = await productsRepository.findById(pid);    
     const index = cart.products.findIndex((product) => product.product == pid);

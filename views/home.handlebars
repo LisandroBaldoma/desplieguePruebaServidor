@@ -1,23 +1,32 @@
+<div class="d-flex justify-content-center flex-column align-items-center">
 
-<h1>{{body}}</h1>
+  <div
+    class="col-10 d-flex flex-column border border-primary align-items-center"
+  >
 
-<h2>Bienvenido: {{user.name}} {{user.lastName}}</h2>
+    <h1>{{body}}</h1>
 
-<h2>Testing</h2>
+    <h2>{{title}}</h2>
 
-<h3>Estrategia Autenticacion</h3>
+    <h3>{{subTtitle}}</h3>
 
+  </div>
 
-<a href="/profile">
-<h2>Profile</h2>
-</a>
+  <div class="col-8 d-flex flex-column border border-primary text-center m-5">
 
+    <h2>Bienvenido: {{user.name}} {{user.lastName}}</h2>
 
+    <div class="m-5">
+      <a class="btn btn-primary" href="/profile" role="button">Profile</a>
+      <a
+        class="btn btn-primary"
+        href="/configuracion"
+        role="button"
+      >Configuracion</a>
+      <a class="btn btn-primary" href="/products" role="button">E-commerce</a>
+    </div>
 
-<a href="Products">
-<h2>Products</h2>
-</a>
-
-
+  </div>
+</div>
 
 <script src="static/js/home.js"></script>

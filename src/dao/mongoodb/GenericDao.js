@@ -4,8 +4,7 @@ function toPojo(object) {
 
 function dtoWeb(docs) {
   const docDtoWeb = [];
-  docs.forEach((element) => {
-    delete element._id;
+  docs.forEach((element) => {    
     delete element.user_id;
     delete element.password;
     delete element.cart;
@@ -83,11 +82,10 @@ export class GenericDao {
   async findOne(criteria) {
     // le saco el lean() para poder actualizar contraseñas si surge un error mas adelante por usar el metodo en otro lado revisar contraseña
     const result = await this.#model.findOne(criteria);
-    if (!result) {
-      throw new Error("NOT FOUND");
-    } else {
+    if (!result) throw new Error("NOT FOUND");
+    
       return result;
-    }
+    
   }
   async updateOne(criteria, newData) {
     const result = await this.#model

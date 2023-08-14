@@ -1,11 +1,11 @@
-//alert("ahora a trabajar con los datos del formulario")
-
 const btn = document.getElementById("btn-submit");
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const password = document.getElementById("password");
 const email = document.getElementById("email");
+const rol = document.getElementById("rolInput");
 const form = document.querySelector(".needs-validation");
+
 
 form.addEventListener(
   "submit",
@@ -22,6 +22,7 @@ form.addEventListener(
         lastName: lastName.value,
         email: email.value,
         password: password.value,
+        rol: rol.value
       };
       const response = await fetch("/api/users", {
         method: "POST",
@@ -34,13 +35,11 @@ form.addEventListener(
 
       if (response.status === 201) {
         clearForm();
-        alertExito()
-        //console.log(response);
-        //console.log("redireccionar");
+        alertExito();
         window.location.href = "/products";
       } else {
-        alert("El usuario NO ESTA REGISTRADO EN LA BD");
-        console.log("[login] estado inesperado: " + response.status);
+        alertFail(response);
+        clearFormFail();
       }
     }
   },
@@ -48,7 +47,6 @@ form.addEventListener(
 );
 
 function alertExito(respuesta) {
-  console.log(respuesta);
   Swal.fire({
     position: "top-end",
     icon: "success",
@@ -57,10 +55,23 @@ function alertExito(respuesta) {
     timer: 3000,
   });
 }
+function alertFail(respuesta) {
+  Swal.fire({
+    icon: "error",
+    title: "Lo sentimos...",
+    text: "El email que intenta registrar, ya existe en la BASE DE DATOS",
+  });
+}
 
 function clearForm() {
   firstName.value = "";
   lastName.value = "";
+  email.value = "";
+  password.value = "";
+  rol.value = "";
+  form.classList.remove("was-validated");
+}
+function clearFormFail() {
   email.value = "";
   password.value = "";
   form.classList.remove("was-validated");

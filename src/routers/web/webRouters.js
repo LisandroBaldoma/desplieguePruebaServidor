@@ -1,6 +1,6 @@
 import express, { Router } from "express";
 
-import { cartDetailView, homeView, loginView, productsView, profileView, registerView, updatePassword } from "../../controllers/web/web.Controller.js";
+import { cartDetailView, configView, homeView, loginView, productsView, profileView, registerView, updatePassword } from "../../controllers/web/web.Controller.js";
 import { soloLogueadosView } from "../../middlewares/soloLogueados.js";
 
 export const webRouters = Router();
@@ -18,3 +18,5 @@ webRouters.get("/profile", soloLogueadosView, profileView)
 webRouters.get("/products", soloLogueadosView, productsView)
 
 webRouters.get("/carts/:cid", soloLogueadosView, cartDetailView)
+
+webRouters.get("/configuracion", soloLogueadosView, configView )

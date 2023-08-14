@@ -13,6 +13,7 @@ import { emailService } from "./email.service.js";
 
 class UsersService {
   async registerUser(user) {
+    console.log(user)
     const datosNewUser = user;
     datosNewUser.password = hashearPassword(datosNewUser.password);
 
@@ -49,6 +50,19 @@ class UsersService {
     }
     return respuesta;
   }
+
+  async updateRolWeb(uid, rol) {
+   
+    const userUpdate = await userRepository.findById(uid)
+        
+    userUpdate.rol = rol
+    userUpdate.save();
+  
+    
+    
+    return userUpdate;
+  }
+  
   async updatePasswordUser(user) {
     const userUpdate = await userRepository.findOne({ email: user.email });
 
@@ -148,6 +162,13 @@ class UsersService {
         let userDelete = await userRepository.deleteOne(element._id);        
       }
     });
+  }
+  async deleteUserId(uid) {  
+    
+    const users = await userRepository.deleteOne(uid)
+    
+    return users
+    
   }
 }
 

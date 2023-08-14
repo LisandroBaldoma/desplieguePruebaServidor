@@ -1,5 +1,12 @@
+import { userRepository } from "../../repositories/user.repository.js";
+
 export function getCurrentSessionController(req, res, next) {
-  res.json(req.user);
+  try {
+    res.json(req.user);
+  } catch (error) {
+    console.log(error)
+  }
+  
 }
 
 export async function logoutSessionsController(req, res, next) {
@@ -10,8 +17,11 @@ export async function logoutSessionsController(req, res, next) {
 }
 
 export function postSessionsController(req, res, next) {
+  
+    res.status(201).json(req.user);
+ 
   //console.log("post session controller despues de buscar el usuario cuando puse login")
   //console.log(req.session)
   //console.log(req.user)
-  res.status(201).json(req.user);
+  
 }
