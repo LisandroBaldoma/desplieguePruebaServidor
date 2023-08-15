@@ -12,9 +12,9 @@ export function manejoDeErrores(error, req, res, next) {
         default:
             res.status(500)
     }
-    console.log('comienza el log del error')
-    console.log(error)
-    console.log('fin del log del error')
+    // console.log('comienza el log del error')
+    // console.log(error)
+    // console.log('fin del log del error')
 
     res.json({ errorMsg: error.message })
 }

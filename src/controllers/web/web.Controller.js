@@ -85,7 +85,7 @@ export async function updatePassword(req, res, next) {
 export async function configView(req, res, next) {
   try {
     // const respuesta = await productsRepository.find(req.query);
-    console.log(req.user)
+    // console.log(req.user)
     // console.log(respuesta.payload)
     res.render("config", {
       title: "Configurciones",

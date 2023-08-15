@@ -17,7 +17,7 @@ passport.use(
     { usernameField: "email" },
     async (username, password, done) => {
       //console.log(username, password);
-      console.log('pasaport login')
+      // console.log('pasaport login')
       try {
         const user = await userRepository.findOne({ email: username });
         //console.log("Este es el usuaario que tenria que encontrar", user);
