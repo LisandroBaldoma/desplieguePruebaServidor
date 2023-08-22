@@ -12,12 +12,17 @@
     <ul class="list-group list-group-flush">
       {{#if products}}
         {{#each productsList}}
-          <li class="list-group-item">producto:
+          <div>
+            <li class="list-group-item">producto:
             {{this.product.title}}
             - cantidad:
             {{this.quantity}}
             - Categoria:
             {{this.product.category}}</li>
+            <img src={{this.product.thumbnails}} name={{this.product.thumbnails}} alt="foto" id="imagenPoducto">
+            {{!-- <img src="../usersFiles/products/heladera.jpeg" alt=""> --}}
+          </div>
+          
         {{/each}}
       {{else}}
         <p>No hay productos para mostrar</p>

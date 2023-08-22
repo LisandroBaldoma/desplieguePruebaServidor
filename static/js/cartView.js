@@ -7,6 +7,12 @@ const carritoContenedor = document.getElementById("carritoContenedor");
 const btnVolver = document.getElementById("btnVolver");
 const btnVaciarCarrito = document.getElementById("btnVaciarCrrito");
 
+const imgProduct = document.getElementById("imagenPoducto");
+
+
+
+
+
 // console.log(btnVaciarCarrito);
 const cartId = cart.value;
 
