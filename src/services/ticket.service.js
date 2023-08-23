@@ -6,6 +6,7 @@ import { productsRepository } from "../repositories/product.respository.js";
 
 import { userRepository } from "../repositories/user.repository.js";
 import { cartService } from "./carts.service.js";
+import { emailService } from "./email.service.js";
 
 class TicketService {
   async purchase(cid) {
@@ -53,6 +54,19 @@ class TicketService {
           cart: cart.products,
           tipo: 0,
         };
+
+        let option = {
+          from: "lrsolucionesintegrales@gmail.com",
+          to: user.email, // list of receivers
+          subject: "Compra realizada! ✔", // Subject line
+          text: "Ha realizado una compra con exito", // plain text body
+          html: `<div> <h2> Usted relizo una compra por un total de $ ${ticket.amount}</h2> </div>`,
+        };
+
+        
+        let respuesta = await emailService.send(option);
+
+
       } else {
         response = {
           response:
