@@ -33,16 +33,33 @@ export function profileView(req, res, next) {
 
 export async function productsView(req, res, next) {
   try {
-    const respuesta = await productsRepository.find(req.query);
-    // console.log(req.user)
-    // console.log(respuesta.payload)
-    res.render("products", {
-      title: "Prodcust",
-      products: respuesta.payload.length > 0,
-      productsList: respuesta.payload,
-      data: respuesta,
-      user: req.user,
-    });
+    console.log(req.user)
+    if(req.user.rol === 'admin'){
+      console.log('vista para admin')
+      const respuesta = await productsRepository.find(req.query);
+      // console.log(req.user)
+      // console.log(respuesta.payload)
+      res.render("productsAdmin", {
+        title: "Prodcust",
+        products: respuesta.payload.length > 0,
+        productsList: respuesta.payload,
+        data: respuesta,
+        user: req.user,
+      });  
+      
+    }else{
+      const respuesta = await productsRepository.find(req.query);
+      // console.log(req.user)
+      // console.log(respuesta.payload)
+      res.render("products", {
+        title: "ProdcustAdmin",
+        products: respuesta.payload.length > 0,
+        productsList: respuesta.payload,
+        data: respuesta,
+        user: req.user,
+      });  
+    }
+    
   } catch (error) {
     next(error);
   }
