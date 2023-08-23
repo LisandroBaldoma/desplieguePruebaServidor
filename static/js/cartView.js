@@ -1,4 +1,4 @@
-console.log("estamos adentro con JS");
+//console.log("estamos adentro con JS");
 
 const btnComprar = document.getElementById("btnComprar");
 const cart = document.getElementById("cartId");
