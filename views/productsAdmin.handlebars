@@ -29,7 +29,16 @@
 <div class="container pt-5" id="tableContainer">
   <table id="example" class="table table-sm table-hover table-bordered" style="width:100%">
 <div class="d-flex justify-content-center">
-  <!-- Button trigger modal --> 
+  <!-- Button trigger modal -->
+
+  <button
+    type="button"
+    class="btn btn-primary mb-3"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >
+    Add Product
+  </button> 
   
 </div>
 <thead>
@@ -62,7 +71,8 @@
         <td class="d-flex">
           {{!-- <button id={{this._id }} class="btn btn-secondary btnAddCart">AddCart</button> --}}
           <button type="button" class="btn btn-primary btnEditCart" id={{this._id}}>Editar</button>
-          <button type="button" class="btn btn-danger btnDeleteCart" id={{this._id}}>Eliminar</button>
+          <button type="button" class="btn btn-danger btnDeleteCart" data-bs-toggle="modal"
+                   data-bs-target="#exampleModalEdit" id={{this._id}}>Eliminar</button>
         </td>        
       </tr>
     {{/each}}
@@ -204,6 +214,121 @@
             </div>
           </div>
           <button type="submit" class="btn btn-primary" id="btnAddProductForm">Agregar
+          Producto</button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >Close</button>
+      </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Product -->
+<div
+  class="modal fade"
+  id="exampleModalEdit"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Product</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="row g-3 needs-validation justify-content-center" 
+          id="formEditProduct"
+          novalidate
+        >
+          <div class="row text-center">
+            <div class="col-6">
+              <label for="input_title" class="form-label">Title</label>
+              <input
+                name="title"
+                type="text"
+                class="form-control"
+                id="input_title_edit"
+                value=""
+                required
+              />
+            </div>
+            <div class="col-6">
+              <label for="input_Description" class="form-label">Description</label>
+              <input
+                name="description"
+                type="text"
+                class="form-control"
+                id="input_description_edit"
+                value=""
+                required
+              />
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-6">
+              <label for="input_stock" class="form-label">Stock</label>
+              <input
+                name="stock"
+                type="number"
+                class="form-control"
+                id="input_stock_edit"
+                value=""
+                required
+              />
+            </div>
+            <div class="col-6">
+              <label for="input_price"class="form-label">Price</label>
+              <input
+                 name="price" 
+                type="number"
+                class="form-control"
+                id="input_price_edit"
+                value=""
+                required
+              />
+
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-6">
+              <label for="code" class="form-label">Code</label>
+              <input
+                name="code"
+                type="text"
+                class="form-control"
+                id="input_code_edit"
+                value=""
+                required
+              />
+            </div>
+            <div class="col-6">
+              <label for="input_category" class="form-label">Category</label>
+              <input
+                 name="category"
+                type="text"
+                class="form-control"
+                id="input_category_edit"
+                value=""
+                required
+              />
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" id="btnEditProductForm">Editar
           Producto</button>
         <button
           type="button"

@@ -2311,3 +2311,451 @@
 {"level":"debug","message":"GET en /products - 22:37:57"}
 {"level":"debug","message":"GET en /static/css/main.css - 22:37:57"}
 {"level":"debug","message":"GET en /static/js/productsAdmin.js - 22:37:57"}
+{"level":"debug","message":"GET en /login - 17:13:54"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:13:55"}
+{"level":"debug","message":"GET en /static/js/login.js - 17:13:55"}
+{"level":"debug","message":"GET en /favicon.ico - 17:13:56"}
+{"level":"debug","message":"POST en /api/sessions - 17:14:05"}
+{"level":"debug","message":"POST en /api/sessions - 17:14:14"}
+{"level":"debug","message":"POST en /api/sessions - 17:14:24"}
+{"level":"debug","message":"POST en /api/sessions - 17:14:30"}
+{"level":"debug","message":"GET en /register - 17:14:40"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:14:40"}
+{"level":"debug","message":"GET en /static/js/registerForm.js - 17:14:40"}
+{"level":"debug","message":"POST en /api/users - 17:14:51"}
+{"level":"debug","message":"POST en /api/users - 17:15:04"}
+{"level":"debug","message":"GET en /products - 17:15:04"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:15:05"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:15:05"}
+{"level":"debug","message":"POST en /api/products - 17:15:22"}
+{"_id":"64e668da7ff2a14b1c3fb94e","category":"dasdasd","code":"dasdasd","description":"dsadsad","id":"19fdb034-a1bf-4b53-bdfd-748ec74f543e","level":"http","message":"Producto Creado","owner":"admin","price":4,"status":true,"stock":3,"thumbnails":["Sin-Imagen"],"title":"sdsadsad"}
+{"level":"debug","message":"GET en /products - 17:15:22"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:15:22"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:15:22"}
+{"level":"debug","message":"POST en /api/products - 17:15:34"}
+{"_id":"64e668e67ff2a14b1c3fb954","category":"Linea Cocina","code":"dasdsa","description":"dasdasd","id":"a81f7c0d-b740-45e1-a99f-51380a1258b1","level":"http","message":"Producto Creado","owner":"admin","price":3,"status":true,"stock":3,"thumbnails":["Sin-Imagen"],"title":"dasdsad"}
+{"level":"debug","message":"GET en /products - 17:15:34"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:15:35"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:15:35"}
+{"level":"debug","message":"GET en /products?page=2 - 17:15:47"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:15:47"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:15:47"}
+{"level":"debug","message":"GET en /products?page=3 - 17:15:49"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:15:49"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:15:49"}
+{"level":"debug","message":"GET en /products?page=4 - 17:15:51"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:15:51"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:15:51"}
+{"level":"debug","message":"GET en /products?page=5 - 17:15:52"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:15:52"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:15:52"}
+{"level":"debug","message":"GET en /products?page=5 - 17:16:14"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:16:15"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:16:15"}
+{"level":"debug","message":"DELETE en /api/products/64e668e67ff2a14b1c3fb954 - 17:16:30"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?page=5 - 17:16:32"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:16:32"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:16:32"}
+{"level":"debug","message":"POST en /api/sessions/logout - 17:16:52"}
+{"level":"debug","message":"GET en /login - 17:16:52"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:16:52"}
+{"level":"debug","message":"GET en /static/js/login.js - 17:16:52"}
+{"level":"debug","message":"POST en /api/sessions - 17:17:02"}
+{"level":"debug","message":"GET en / - 17:17:02"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:17:02"}
+{"level":"debug","message":"GET en /static/js/home.js - 17:17:02"}
+{"level":"debug","message":"GET en /products - 17:17:04"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:17:04"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:17:04"}
+{"level":"debug","message":"POST en /api/products - 17:17:14"}
+{"_id":"64e6694a7e183f489607256d","category":"dsadasd","code":"dasdas","description":"dsadsad","id":"887e6dbe-cde3-48d0-855a-4906c2c6ed03","level":"http","message":"Producto Creado","owner":"admin","price":4,"status":false,"stock":4,"thumbnails":["Sin-Imagen"],"title":"dsadsa"}
+{"level":"debug","message":"GET en /products - 17:17:14"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:17:15"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:17:15"}
+{"level":"debug","message":"GET en /products?page=2 - 17:17:17"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:17:17"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:17:17"}
+{"level":"debug","message":"GET en /products?page=3 - 17:17:19"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:17:19"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:17:19"}
+{"level":"debug","message":"GET en /products?page=4 - 17:17:20"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:17:20"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:17:20"}
+{"level":"debug","message":"GET en /products?page=5 - 17:17:21"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:17:22"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:17:22"}
+{"level":"debug","message":"DELETE en /api/products/64e6694a7e183f489607256d - 17:17:25"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?page=5 - 17:17:26"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:17:26"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:17:26"}
+{"level":"debug","message":"GET en /products?page=5 - 17:19:20"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:19:20"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:19:20"}
+{"level":"debug","message":"GET en /products?page=4 - 17:19:23"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:19:23"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:19:23"}
+{"level":"debug","message":"DELETE en /api/products/64d9623d8e1dc687d1d79768 - 17:19:31"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 17:19:33"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:19:33"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:19:33"}
+{"level":"debug","message":"GET en /products?page=4 - 17:36:31"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:36:31"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:36:31"}
+{"level":"debug","message":"GET en /products?page=4 - 17:37:50"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:37:50"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:37:50"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:38:58"}
+{"level":"debug","message":"GET en /products?page=4 - 17:39:03"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:39:03"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:39:03"}
+{"level":"debug","message":"GET en /products?page=4 - 17:40:08"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:40:08"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:40:08"}
+{"level":"debug","message":"GET en /products?page=4 - 17:41:52"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:41:52"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:41:52"}
+{"level":"debug","message":"GET en /products?page=4 - 17:45:45"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:45:46"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:45:46"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 17:45:48"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 17:48:28"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:48:29"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:48:29"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 17:48:31"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 17:50:34"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:50:35"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:50:35"}
+{"level":"debug","message":"GET en /api/products/64d9619846ac0172cddca087 - 17:50:36"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 17:51:40"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:51:40"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:51:40"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 17:51:43"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 17:52:33"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:52:33"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:52:33"}
+{"level":"debug","message":"GET en /products?page=4 - 17:53:00"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:53:00"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:53:00"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 17:53:02"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /api/products/64d9619846ac0172cddca087 - 17:53:49"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 17:54:50"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:54:50"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:54:50"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 17:54:52"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 17:55:57"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:55:57"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:55:57"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 17:55:58"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 17:56:28"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 17:59:20"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:59:20"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:59:20"}
+{"level":"debug","message":"GET en /products?page=4 - 17:59:22"}
+{"level":"debug","message":"GET en /static/css/main.css - 17:59:22"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 17:59:22"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 17:59:23"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 18:03:48"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:03:48"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:03:48"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 18:03:50"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 18:04:27"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:04:28"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:04:28"}
+{"level":"debug","message":"GET en /api/products/64d9619846ac0172cddca087 - 18:04:30"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 18:05:29"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:05:29"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:05:29"}
+{"level":"debug","message":"GET en /api/products/64d9619846ac0172cddca087 - 18:05:31"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 18:28:59"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:28:59"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:28:59"}
+{"level":"debug","message":"GET en /api/products/64d9619846ac0172cddca087 - 18:29:02"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 18:29:16"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:29:16"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:29:16"}
+{"level":"debug","message":"GET en /api/products/64d9619846ac0172cddca087 - 18:29:20"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?page=4 - 18:29:55"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:29:55"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:29:55"}
+{"level":"debug","message":"GET en /products?page=4 - 18:30:11"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:30:11"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:30:11"}
+{"level":"debug","message":"GET en /products?page=4 - 18:30:32"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:30:32"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:30:32"}
+{"level":"debug","message":"GET en /products?page=4 - 18:37:53"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:37:54"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:37:54"}
+{"level":"debug","message":"GET en /products?page=4 - 18:37:56"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:37:57"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:37:57"}
+{"level":"debug","message":"GET en /api/products/64d960ca0d2117515c100162 - 18:38:15"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?title=dsadsadasd&description=dsadasdsad&stock=2323&price=3232323&code=dfdfdfdvvxcv&category=dasdasdasd - 18:38:21"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:38:21"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:38:21"}
+{"level":"debug","message":"GET en /products?title=dsadsadasd&description=dsadasdsad&stock=2323&price=3232323&code=dfdfdfdvvxcv&category=dasdasdasd - 18:42:57"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:42:57"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:42:57"}
+{"level":"debug","message":"GET en /api/products/64a1d756d3dd66077798eeb8 - 18:42:59"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=3&price=123455&code=heladdssera34da3+fdsf&category=Linea+Blanca - 18:43:01"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:43:01"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:43:01"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:43:10"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:43:17"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:43:18"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:43:18"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:43:20"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:43:20"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:43:20"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:43:36"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=3&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:43:40"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:43:40"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:43:40"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:44:33"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:44:37"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:44:38"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:44:38"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:44:57"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:44:57"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:44:57"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:44:58"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:47:58"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:47:58"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:47:58"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:48:00"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d66f0830dad953991f46 - 18:48:04"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:48:35"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:48:36"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:48:36"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:48:58"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d66f0830dad953991f46 - 18:49:04"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:49:10"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:49:10"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:49:10"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:49:15"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d66f0830dad953991f46 - 18:49:19"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:49:19"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:49:19"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:49:19"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:49:39"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:49:39"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:49:39"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:49:41"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d66f0830dad953991f46 - 18:49:47"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:52:41"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:52:41"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:52:41"}
+{"level":"debug","message":"GET en /api/products/64a1d7cdd3dd66077798eec0 - 18:52:44"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d7cdd3dd66077798eec0 - 18:52:50"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:52:52"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:52:53"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:52:53"}
+{"level":"debug","message":"GET en /api/products/64a1d756d3dd66077798eeb8 - 18:55:20"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d756d3dd66077798eeb8 - 18:55:26"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:55:27"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:55:28"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:55:28"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:55:30"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:55:30"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:55:30"}
+{"level":"debug","message":"GET en /api/products/64a1d66f0830dad953991f46 - 18:55:32"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d66f0830dad953991f46 - 18:55:34"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:55:35"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:55:35"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:55:35"}
+{"level":"debug","message":"DELETE en /api/products/64a1d66f0830dad953991f46 - 18:55:43"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:55:45"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:55:45"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:55:45"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:56:38"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:56:38"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:56:38"}
+{"level":"debug","message":"GET en /api/products/64a1d756d3dd66077798eeb8 - 18:57:56"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"DELETE en /api/products/64a1d756d3dd66077798eeb8 - 18:58:04"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?title=Heladera+Post&description=Heladera+NoFrost&stock=2&price=123455&code=heladera343+fdsf&category=Linea+Blanca - 18:58:05"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:58:06"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:58:06"}
+{"level":"debug","message":"GET en /products?title=dsds&description=csd&stock=2&price=2&code=cdsc&category=cdsd&thumbnails=Sin-Imagen&status=true - 18:58:34"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:58:34"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:58:34"}
+{"level":"debug","message":"GET en /products?title=dsds&description=csd&stock=2&price=2&code=cdsc&category=cdsd&thumbnails=Sin-Imagen&status=true - 18:58:38"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:58:38"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:58:38"}
+{"level":"debug","message":"GET en /products?title=dscdsc&description=cdscds&stock=2&price=2&code=cdscds&category=cdscds&thumbnails=Sin-Imagen&status=true - 18:58:49"}
+{"level":"debug","message":"GET en /static/css/main.css - 18:58:49"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 18:58:49"}
+{"level":"debug","message":"GET en /products?title=dscdsc&description=cdscds&stock=2&price=2&code=cdscds&category=cdscds&thumbnails=Sin-Imagen&status=true - 19:02:28"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:02:28"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:02:28"}
+{"level":"debug","message":"GET en /products?title=ewqewqe&description=eqweqw&stock=3&price=4&code=ewqwewq&category=ewqeqw&thumbnails=Sin-Imagen&status=true - 19:02:40"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:02:41"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:02:41"}
+{"level":"debug","message":"GET en /products?title=ewqewqe&description=eqweqw&stock=3&price=4&code=ewqwewq&category=ewqeqw&thumbnails=Sin-Imagen&status=true - 19:02:44"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:02:44"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:02:44"}
+{"level":"debug","message":"POST en /api/sessions/logout - 19:03:29"}
+{"level":"debug","message":"GET en /login - 19:03:29"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:03:29"}
+{"level":"debug","message":"GET en /static/js/login.js - 19:03:29"}
+{"level":"debug","message":"GET en /register - 19:03:32"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:03:32"}
+{"level":"debug","message":"GET en /static/js/registerForm.js - 19:03:32"}
+{"level":"debug","message":"POST en /api/users - 19:03:44"}
+{"level":"debug","message":"GET en /products - 19:03:44"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:03:45"}
+{"level":"debug","message":"GET en /static/js/products.js - 19:03:45"}
+{"level":"debug","message":"POST en /api/products - 19:03:59"}
+{"level":"debug","message":"POST en /api/sessions/logout - 19:04:16"}
+{"level":"debug","message":"GET en /login - 19:04:16"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:04:16"}
+{"level":"debug","message":"GET en /static/js/login.js - 19:04:16"}
+{"level":"debug","message":"POST en /api/sessions - 19:04:21"}
+{"level":"debug","message":"GET en / - 19:04:22"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:04:22"}
+{"level":"debug","message":"GET en /static/js/home.js - 19:04:22"}
+{"level":"debug","message":"GET en /products - 19:04:24"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:04:24"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:04:24"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:06:29"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:06:29"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:06:29"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:06:32"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:06:32"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:06:32"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:06:37"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:06:37"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:06:37"}
+{"level":"debug","message":"POST en /api/products - 19:06:50"}
+{"_id":"64e682fa5f9f37cd6789e2ea","category":"dasda","code":"dasd","description":"dasdsa","id":"1adfb415-180a-4a2b-be24-f5538829b0bf","level":"http","message":"Producto Creado","owner":"admin","price":3,"status":true,"stock":4,"thumbnails":["Sin-Imagen"],"title":"dsadsa"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:06:50"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:06:50"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:06:50"}
+{"level":"debug","message":"GET en /api/products/64a1d7cdd3dd66077798eec0 - 19:08:24"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d7cdd3dd66077798eec0 - 19:08:30"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:08:30"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:08:30"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:08:30"}
+{"level":"debug","message":"DELETE en /api/products/64a1d7cdd3dd66077798eec0 - 19:08:36"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:08:38"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:08:38"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:08:38"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:09:43"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:09:43"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:09:43"}
+{"level":"debug","message":"DELETE en /api/products/64a1d7f241b8bc293ef77b79 - 19:09:53"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:09:55"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:09:55"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:09:55"}
+{"level":"debug","message":"GET en /api/products/64a1f0faf011bb00ba58392c - 19:10:25"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"DELETE en /api/products/64a1f0faf011bb00ba58392c - 19:11:15"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:11:17"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:11:17"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:11:17"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:11:49"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:11:49"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:11:50"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:12:02"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:12:02"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:12:02"}
+{"level":"debug","message":"GET en /api/products/64a1d80381799af943cc2aa9 - 19:12:06"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:15:07"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:15:07"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:15:07"}
+{"level":"debug","message":"GET en /products?title=dssad&description=dasdas&stock=2&price=2&code=dasd&category=dadsad&thumbnails=Sin-Imagen&status=true - 19:16:51"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:16:51"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:16:51"}
+{"level":"debug","message":"GET en /api/products/64a1f742800bb6d92a44d02b - 19:16:53"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"GET en /products?title=sASs&description=sASasA&stock=3&price=2&code=Sas&category=sAS&thumbnails=Sin-Imagen&status=true - 19:17:36"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:17:36"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:17:36"}
+{"level":"debug","message":"GET en /products?title=sASs&description=sASasA&stock=3&price=2&code=Sas&category=sAS&thumbnails=Sin-Imagen&status=true - 19:17:40"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:17:40"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:17:40"}
+{"level":"debug","message":"GET en /products?title=sSasASas&description=SasASas&stock=3&price=3&code=sSas&category=ASas&thumbnails=Sin-Imagen&status=false - 19:17:59"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:17:59"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:17:59"}
+{"level":"debug","message":"GET en /products?title=sSasASas&description=SasASas&stock=3&price=3&code=sSas&category=ASas&thumbnails=Sin-Imagen&status=false - 19:18:27"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:18:27"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:18:27"}
+{"level":"debug","message":"POST en /api/products - 19:18:42"}
+{"level":"debug","message":"GET en /products?title=sSasASas&description=SasASas&stock=3&price=3&code=sSas&category=ASas&thumbnails=Sin-Imagen&status=false - 19:18:42"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:18:42"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:18:42"}
+{"level":"debug","message":"GET en /products?title=sSasASas&description=SasASas&stock=3&price=3&code=sSas&category=ASas&thumbnails=Sin-Imagen&status=false - 19:18:48"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:18:48"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:18:48"}
+{"level":"debug","message":"GET en /products?title=sSasASas&description=SasASas&stock=3&price=3&code=sSas&category=ASas&thumbnails=Sin-Imagen&status=false - 19:19:31"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:19:31"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:19:31"}
+{"level":"debug","message":"GET en /products?title=dsadsad&description=dsadsad&stock=3&price=4&code=3ee32dascxz&category=czxcxzc&thumbnails=Sin-Imagen&status=true - 19:19:44"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:19:45"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:19:45"}
+{"level":"debug","message":"GET en /products?title=dsadsad&description=dsadsad&stock=3&price=4&code=3ee32dascxz&category=czxcxzc&thumbnails=Sin-Imagen&status=true - 19:21:58"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:21:58"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:21:58"}
+{"level":"debug","message":"POST en /api/products - 19:22:11"}
+{"_id":"64e68693bb7531a4ebe58ca0","category":"Linea Blanca","code":"dasdww3333","description":"dsda","id":"e8a2f54a-5c1a-4472-98a9-76b324b1e78a","level":"http","message":"Producto Creado","owner":"admin","price":3,"status":false,"stock":3,"thumbnails":["Sin-Imagen"],"title":"dssd"}
+{"level":"debug","message":"GET en /products?title=dsadsad&description=dsadsad&stock=3&price=4&code=3ee32dascxz&category=czxcxzc&thumbnails=Sin-Imagen&status=true - 19:22:11"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:22:11"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:22:11"}
+{"level":"debug","message":"GET en /api/products/64a1d80381799af943cc2aa9 - 19:22:16"}
+{"level":"http","message":"Handle_Get Prodcuts"}
+{"level":"debug","message":"PUT en /api/products/64a1d80381799af943cc2aa9 - 19:22:22"}
+{"level":"http","message":"Handle_Put Prodcuts"}
+{"level":"debug","message":"GET en /products?title=dsadsad&description=dsadsad&stock=3&price=4&code=3ee32dascxz&category=czxcxzc&thumbnails=Sin-Imagen&status=true - 19:22:22"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:22:22"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:22:22"}
+{"level":"debug","message":"DELETE en /api/products/64a1d80381799af943cc2aa9 - 19:22:27"}
+{"level":"http","message":"Handle_Deleted Prodcuts"}
+{"level":"debug","message":"GET en /products?title=dsadsad&description=dsadsad&stock=3&price=4&code=3ee32dascxz&category=czxcxzc&thumbnails=Sin-Imagen&status=true - 19:22:29"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:22:29"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:22:29"}
