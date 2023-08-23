@@ -131,10 +131,10 @@ class UsersService {
     return respuesta;
   }
   async saveDocuments(document, uid) {
-    console.log("enviar documentos");
+    // console.log("enviar documentos");
     const user = await userRepository.findById(uid);
-    console.log(user);
-    console.log(document["documents"]);
+    // console.log(user);
+    // console.log(document["documents"]);
 
     const documents = {
       name: document["documents"][0].fieldname,

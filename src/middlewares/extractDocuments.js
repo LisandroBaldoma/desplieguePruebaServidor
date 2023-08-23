@@ -1,7 +1,7 @@
 import multer from "multer";
 
 
-console.log("Middleware extarer fotos");
+// console.log("Middleware extarer fotos");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {    

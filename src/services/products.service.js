@@ -27,7 +27,7 @@ class ProductsService {
       
     const deleteProduct = await productsRepository.deleteOne(pid);
     
-    console.log(deleteProduct)
+    // console.log(deleteProduct)
     
     if(!deleteProduct) throw new Error('NOT FOUND')
     

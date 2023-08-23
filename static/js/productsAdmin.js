@@ -24,8 +24,8 @@ if (buttonEditCart) {
   for (let btn of buttonEditCart) {
     // console.log('editar prodcuto')
     btn.addEventListener("click", () => {
-      console.log("editar producto");
-      console.log(btn.id);
+      // console.log("editar producto");
+      // console.log(btn.id);
       myModalEdit.toggle();
 
       fetch(`/api/products/${btn.id}`, {
@@ -37,7 +37,7 @@ if (buttonEditCart) {
         .then((response) => {
           response.json().then((data) => {
             let product = data;
-            console.log(product);
+            // console.log(product);
             title.value = product.title
             description.value = product.description
             stock.value = product.stock
@@ -51,7 +51,7 @@ if (buttonEditCart) {
                 const formData = new FormData(formEditProduct);
                 const data = {};
                 formData.forEach((value, key) => (data[key] = value));
-                console.log(data)
+                // console.log(data)
                 fetch(`/api/products/${product._id}`, {
                   method: "PUT",
                   body: JSON.stringify(data),
@@ -59,7 +59,7 @@ if (buttonEditCart) {
                     "Content-Type": "application/json",
                   },
                 }).then((response) => {
-                  console.log(response);
+                  // console.log(response);
                   if (response.status == 200) {                    
                     alertExito("El producto se actualizo correctamente");
                     
