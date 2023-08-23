@@ -2759,3 +2759,12 @@
 {"level":"debug","message":"GET en /products?title=dsadsad&description=dsadsad&stock=3&price=4&code=3ee32dascxz&category=czxcxzc&thumbnails=Sin-Imagen&status=true - 19:22:29"}
 {"level":"debug","message":"GET en /static/css/main.css - 19:22:29"}
 {"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:22:29"}
+{"level":"debug","message":"GET en / - 19:44:24"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:44:24"}
+{"level":"debug","message":"GET en /static/js/home.js - 19:44:24"}
+{"level":"debug","message":"GET en /profile - 19:44:28"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:44:28"}
+{"level":"debug","message":"GET en /static/js/profile.js - 19:44:28"}
+{"level":"debug","message":"GET en /products - 19:44:33"}
+{"level":"debug","message":"GET en /static/css/main.css - 19:44:33"}
+{"level":"debug","message":"GET en /static/js/productsAdmin.js - 19:44:33"}
