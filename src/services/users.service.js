@@ -13,18 +13,31 @@ import { emailService } from "./email.service.js";
 
 class UsersService {
   async registerUser(user) {
-    // console.log(user)
-    const datosNewUser = user;
-    datosNewUser.password = hashearPassword(datosNewUser.password);
+    console.log(user.rol);
+    if (user.rol === "admin") {
+     
+      const datosNewUser = user;
+      datosNewUser.password = hashearPassword(datosNewUser.password);     
 
-    const newCart = new Cart();
-    const cartUser = await cartService.createCarts(newCart.datosCarts());
+      const newUser = new User(datosNewUser);
 
-    datosNewUser.cart = cartUser._id;
+      const userRegister = await userRepository.create(newUser.datosUser());
+      return userRegister;
+    } else {
+      
+      const datosNewUser = user;
+      datosNewUser.password = hashearPassword(datosNewUser.password);
 
-    const newUser = new User(datosNewUser);
-    const userRegister = await userRepository.create(newUser.datosUser());
-    return userRegister;
+      const newCart = new Cart();
+      const cartUser = await cartService.createCarts(newCart.datosCarts());
+
+      datosNewUser.cart = cartUser._id;
+
+      const newUser = new User(datosNewUser);
+
+      const userRegister = await userRepository.create(newUser.datosUser());
+      return userRegister;
+    }
   }
   async updateRol(uid) {
     let respuesta;
@@ -52,17 +65,14 @@ class UsersService {
   }
 
   async updateRolWeb(uid, rol) {
-   
-    const userUpdate = await userRepository.findById(uid)
-        
-    userUpdate.rol = rol
+    const userUpdate = await userRepository.findById(uid);
+
+    userUpdate.rol = rol;
     userUpdate.save();
-  
-    
-    
+
     return userUpdate;
   }
-  
+
   async updatePasswordUser(user) {
     const userUpdate = await userRepository.findOne({ email: user.email });
 
@@ -121,7 +131,10 @@ class UsersService {
     return respuesta;
   }
   async saveDocuments(document, uid) {
+    // console.log("enviar documentos");
     const user = await userRepository.findById(uid);
+    // console.log(user);
+    // console.log(document["documents"]);
 
     const documents = {
       name: document["documents"][0].fieldname,
@@ -159,16 +172,14 @@ class UsersService {
           html: `<div> <h3>Su usuario ha sido eliminado, por falta de actividad</h3> </div>`,
         };
         let respuesta = await emailService.send(option);
-        let userDelete = await userRepository.deleteOne(element._id);        
+        let userDelete = await userRepository.deleteOne(element._id);
       }
     });
   }
-  async deleteUserId(uid) {  
-    
-    const users = await userRepository.deleteOne(uid)
-    
-    return users
-    
+  async deleteUserId(uid) {
+    const users = await userRepository.deleteOne(uid);
+
+    return users;
   }
 }
 

@@ -23,14 +23,18 @@ class ProductsService {
     winstonLogger.http("Producto Creado", result);
     return result;
   }
-  async deleteProduct(pid){    
+  async deleteProduct(pid){  
+      
     const deleteProduct = await productsRepository.deleteOne(pid);
+    
+    // console.log(deleteProduct)
+    
     if(!deleteProduct) throw new Error('NOT FOUND')
     
     let option = {
       from: "lrsolucionesintegrales@gmail.com",
       to: deleteProduct.owner, // list of receivers
-      subject: "Hello ✔", // Subject line
+      subject: "Producto Eliminado ✔", // Subject line
       text: "Producto Eliminado", // plain text body
       html: `<div> <h3>Se ha eliminado el productos ${deleteProduct.title}</h3> </div>`,
     };

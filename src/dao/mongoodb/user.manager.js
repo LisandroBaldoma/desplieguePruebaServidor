@@ -11,7 +11,7 @@ const schemaUser = new mongoose.Schema(
     password: { type: String, required: true },
     name: { type: String, required: true },
     age: { type: Number, default: 18 },
-    cart: { type: Schema.Types.ObjectId, ref: "carts", required: true },
+    cart: { type: Schema.Types.ObjectId, ref: "carts", required: false },
     lastName: { type: String, required: true },
     rol: { type: String, enum: ["user", "admin", "premium"], default: "user" },
     documents: { type: Array },
